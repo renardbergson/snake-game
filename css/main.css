@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Press Start 2P", cursive;
 }
 
 .workSpace {
@@ -34,4 +35,7 @@ body {
 }
 .workSpace .score img {
   width: 30px;
+}
+.workSpace .score span {
+  margin-top: 2px;
 }/*# sourceMappingURL=main.css.map */
