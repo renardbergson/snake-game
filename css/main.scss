@@ -1,1 +1,29 @@
 @import 'base.scss';
+
+.grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    border-style: solid;
+
+    div {
+        width: 19.4px;
+        height: 19.4px;
+        border: 0.1px solid black;
+    }
+
+    .snake {
+        background-color: blue;
+    }
+
+    .apple {
+        background-color: purple;
+    }
+}

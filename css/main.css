@@ -1,1 +1,30 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  border-style: solid;
+}
+.grid div {
+  width: 19.4px;
+  height: 19.4px;
+  border: 0.1px solid black;
+}
+.grid .snake {
+  background-color: blue;
+}
+.grid .apple {
+  background-color: purple;
+}/*# sourceMappingURL=main.css.map */
