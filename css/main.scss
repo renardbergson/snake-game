@@ -1,29 +1,27 @@
 @import 'base.scss';
 
-.grid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
-    display: grid;
-    grid-template-columns: repeat(10, auto);
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    border-style: solid;
+.workSpace {
+    position: relative;
 
-    div {
-        width: 19.4px;
-        height: 19.4px;
-        border: 0.1px solid black;
+    .stage {
+        width: 400px;
+        height: 400px;
+        background-image: url(../img/grass.png);
+        background-size: cover;
+        box-shadow: 10px 10px 20px #00000057;
     }
-
-    .snake {
-        background-color: blue;
-    }
-
-    .apple {
-        background-color: purple;
+    
+    .score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //border: 1px solid black;
+        position: absolute;
+        top: -8%;
+        right: 0%;
+        
+        img {
+            width: 30px;
+        }
     }
 }
