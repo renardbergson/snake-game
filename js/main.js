@@ -18,7 +18,6 @@ let yMovement = 0
 
 // draw game loop                                    
 function drawGame () {
-    //console.log('teste')
     setTimeout(drawGame, 1000 / speedGame)
     screenUpdate()         
     drawSnake()             // ordering the elements correctly is important
@@ -38,38 +37,46 @@ function drawSnake () {
     ctx.fillRect(xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)                                        
 }
 
-// keyDown listener and functions
-document.body.addEventListener('keydown', keyDown)
-function keyDown (event) {
-    // arrowUp
-    if (event.keyCode === 38) {
-        yMovement = -1 // because the Y angle has value zero in the center and decreases when goind up
-        xMovement = 0 // because we wanna do nothing with X angle when pressing arrow up key 
-    }
-    
-    // arrowDown
-    if (event.keyCode === 40) {
-        yMovement = 1 
-        xMovement = 0 
-    }
-
-    // arrowLeft
-    if (event.keyCode === 37) {
-        yMovement = 0
-        xMovement = -1
-    }
-
-    // arrowRight
-    if (event.keyCode === 39) {
-        yMovement = 0
-        xMovement = 1
-    }
-}
-
 // change snake position function
 function changeSnakePosition () {
     xPosition += xMovement
     yPosition += yMovement
+}
+
+// keyDown listener and functions
+document.body.addEventListener('keydown', keyDown)
+function keyDown (event) {
+    // Up
+    if (event.keyCode === 38) {
+        if (yMovement === 1) // here, we're talking about what happens when we press the arrow down key 
+            return           // so, if we're moving down (Y = 1), don't read this block of code
+        yMovement = -1 // the Y angle has value zero in the center and decreases when goind up
+        xMovement = 0 // we wanna do nothing with X angle when pressing arrow up key 
+    }
+    
+    // Down
+    if (event.keyCode === 40) {
+        if (yMovement === -1) // if we're moving up (Y = -1), don't read this block of code
+            return
+        yMovement = 1 
+        xMovement = 0 
+    }
+
+    // Left
+    if (event.keyCode === 37) {
+        if (xMovement === 1) // if we're moving right (X = 1), don't read this block of code
+            return
+        yMovement = 0
+        xMovement = -1
+    }
+
+    // Right
+    if (event.keyCode === 39) {
+        if (xMovement === -1) // if we're moving left (X = -1), don't read this block of code
+            return
+        yMovement = 0
+        xMovement = 1
+    }
 }
 
 drawGame()
