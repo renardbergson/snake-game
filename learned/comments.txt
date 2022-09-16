@@ -1,0 +1,18 @@
+to work with canvas, first we get it into a variable and then we get it's context, using the 
+canvasVariable.getContext('renderstyle') method
+
+
+ctx.fillStyle (this property sets the style for drawing an object)
+ctx.fillRect  (this function applies the previous style, it receives: x position, y position, width, height)
+
+
+in this case, the setTimeout() function is what's going to countinuously update the screen, based
+on the speedGame variable. We can use the console.log to see how it works
+
+
+setting the tileSize based on canvas.width divided per the tileCount variable give us freedom to 
+update better the tileSize in the future, if we want
+
+
+for now, we wanna get the 200 value for X and Y angles, because the screen game has 400x400 so, 
+200 for both is the middle of the screen
