@@ -19,9 +19,17 @@ let yMovement = 0
 // draw game loop                                    
 function drawGame () {
     //console.log('teste')
-    setTimeout(drawGame, 1000 / speedGame)       
-    drawSnake()
+    setTimeout(drawGame, 1000 / speedGame)
+    screenUpdate()         
+    drawSnake()             // ordering the elements correctly is important
     changeSnakePosition()
+}
+
+// screen update function
+function screenUpdate () {
+    const background = new Image()
+    background.src = '../img/grass.png'
+    ctx.drawImage(background, 0, 0) // this function avoids the snake path remains on the screen 
 }
 
 // draw snake
@@ -30,7 +38,7 @@ function drawSnake () {
     ctx.fillRect(xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)                                        
 }
 
-//keyDown listener and function
+// keyDown listener and functions
 document.body.addEventListener('keydown', keyDown)
 function keyDown (event) {
     // arrowUp
