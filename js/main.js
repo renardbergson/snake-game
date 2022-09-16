@@ -3,7 +3,7 @@ const $canvas = document.querySelector('.stage')
 const ctx = $canvas.getContext('2d')
 
 //speed game
-let speedGame = 4
+let speedGame = 5
 
 // tile settings
 let tileCount = 20
@@ -45,6 +45,24 @@ function keyDown (event) {
     if (event.keyCode === 38) {
         yMovement = -1 // because the Y angle has value zero in the center and decreases when goind up
         xMovement = 0 // because we wanna do nothing with X angle when pressing arrow up key 
+    }
+    
+    // arrowDown
+    if (event.keyCode === 40) {
+        yMovement = 1 
+        xMovement = 0 
+    }
+
+    // arrowLeft
+    if (event.keyCode === 37) {
+        yMovement = 0
+        xMovement = -1
+    }
+
+    // arrowRight
+    if (event.keyCode === 39) {
+        yMovement = 0
+        xMovement = 1
     }
 }
 
