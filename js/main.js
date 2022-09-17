@@ -27,6 +27,7 @@ function drawGame () {
     drawApple()      
     drawSnake()             // ordering the elements correctly is important
     changeSnakePosition()
+    checkAppleCollision()
 }
 
 // screen update function
@@ -44,18 +45,28 @@ function drawSnake () {
     // for X and Y                            
 }
 
-// change snake position function
-function changeSnakePosition () {
-    xPosition += xMovement
-    yPosition += yMovement
-}
-
 // draw Apple
 function drawApple () {
     const apple = new Image()
     apple.src = 'img/apple.png'
     ctx.drawImage(apple, appleX * tileCount, appleY * tileCount, tileSize, tileSize)
 }  
+
+// change snake position function
+function changeSnakePosition () {
+    xPosition += xMovement
+    yPosition += yMovement
+}
+
+function checkAppleCollision () {
+    if (appleX === xPosition && appleY === yPosition) {
+        appleX = parseInt(Math.random() * tileCount)
+        appleY = parseInt(Math.random() * tileCount)
+        // math random function returns random numbers between 0 and 1
+        // we use parse int function to convert those numbers to integer values 
+        // then, we multiply those numbers by the number of tiles
+    }
+}
 
 // keyDown listener and functions
 document.body.addEventListener('keydown', keyDown)
