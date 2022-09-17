@@ -20,7 +20,7 @@ let yMovement = 0
 let appleX = 5
 let appleY = 5
 
-// snake body constructor and variables 
+// snake body constructor 
 class snakePart {
     constructor(xPosition, yPosition) {
         this._x = xPosition
@@ -28,8 +28,14 @@ class snakePart {
     }
 }
 
+// snake body variables
 let snakeParts = []
 let tailLength = 1
+
+// score 
+let $score = document.querySelector('.scoreWrapper span')
+let scoreCounter = 1
+
 
 // draw game loop                                    
 function drawGame () {
@@ -91,6 +97,8 @@ function checkAppleCollision () {
         // we use parse int function to convert those numbers to integer values 
         // then, we multiply those numbers by the number of tiles
         tailLength++
+        speedGame += 0.1
+        $score.innerText = scoreCounter++
     }
 }
 

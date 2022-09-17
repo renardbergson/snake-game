@@ -21,7 +21,7 @@ body {
 .workSpace .stage {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3411764706);
 }
-.workSpace .score {
+.workSpace .scoreWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,9 +29,9 @@ body {
   top: -8%;
   right: 0%;
 }
-.workSpace .score img {
+.workSpace .scoreWrapper img {
   width: 30px;
 }
-.workSpace .score span {
+.workSpace .scoreWrapper span {
   margin-top: 2px;
 }/*# sourceMappingURL=main.css.map */
