@@ -20,6 +20,17 @@ let yMovement = 0
 let appleX = 5
 let appleY = 5
 
+// snake body constructor and variables 
+class snakePart {
+    constructor(xPosition, yPosition) {
+        this._x = xPosition
+        this._y = yPosition
+    }
+}
+
+let snakeParts = []
+let tailLength = 1
+
 // draw game loop                                    
 function drawGame () {
     setTimeout(drawGame, 1000 / speedGame)
@@ -39,10 +50,24 @@ function screenUpdate () {
 
 // draw snake
 function drawSnake () {
+    // ******************************************** BODY ********************************************
+    ctx.fillStyle = 'orange'
+    for(let i = 0; i < snakeParts.length; i++) {
+        let part = snakeParts[i]
+        ctx.fillRect(part._x * tileCount, part._y * tileCount, tileSize, tileSize)
+    }            
+    
+    snakeParts.push(new snakePart(xPosition, yPosition)) // the push function adds an element into an array
+    
+    if (snakeParts.length > tailLength) { // the shift function removes the furtherst item from the array,
+        snakeParts.shift()                // if it has more items than our tailLenght variable
+    }                                     // the last part added is always the nearest of the snake head! 
+
+    // ******************************************** HEAD ********************************************
     ctx.fillStyle = 'black'                         
     ctx.fillRect(xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)      
     // multiplying the position by the number of tiles gives us the right number of possibilities 
-    // for X and Y                            
+    // for X and Y
 }
 
 // draw Apple
@@ -65,6 +90,7 @@ function checkAppleCollision () {
         // math random function returns random numbers between 0 and 1
         // we use parse int function to convert those numbers to integer values 
         // then, we multiply those numbers by the number of tiles
+        tailLength++
     }
 }
 
