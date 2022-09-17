@@ -9,17 +9,22 @@ let speedGame = 5
 let tileCount = 20
 let tileSize = $canvas.width / tileCount - 2 // the subtraction separates the tiles from each other           
 
-// snake head and movement
+// snake position and movement variables
 let xPosition = 10                                                
 let yPosition = 10            
 
 let xMovement = 0
 let yMovement = 0
 
+// apple position variables
+let appleX = 5
+let appleY = 5
+
 // draw game loop                                    
 function drawGame () {
     setTimeout(drawGame, 1000 / speedGame)
-    screenUpdate()         
+    screenUpdate()   
+    drawApple()      
     drawSnake()             // ordering the elements correctly is important
     changeSnakePosition()
 }
@@ -27,14 +32,16 @@ function drawGame () {
 // screen update function
 function screenUpdate () {
     const background = new Image()
-    background.src = '../img/grass.png'
+    background.src = 'img/grass.png'
     ctx.drawImage(background, 0, 0) // this function avoids the snake path remains on the screen 
 }
 
 // draw snake
 function drawSnake () {
     ctx.fillStyle = 'black'                         
-    ctx.fillRect(xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)                                        
+    ctx.fillRect(xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)      
+    // multiplying the position by the number of tiles gives us the right number of possibilities 
+    // for X and Y                            
 }
 
 // change snake position function
@@ -42,6 +49,13 @@ function changeSnakePosition () {
     xPosition += xMovement
     yPosition += yMovement
 }
+
+// draw Apple
+function drawApple () {
+    const apple = new Image()
+    apple.src = 'img/apple.png'
+    ctx.drawImage(apple, appleX * tileCount, appleY * tileCount, tileSize, tileSize)
+}  
 
 // keyDown listener and functions
 document.body.addEventListener('keydown', keyDown)
