@@ -45,6 +45,7 @@ function drawGame () {
     drawSnake()             // ordering the elements correctly is important
     changeSnakePosition()
     checkAppleCollision()
+    bordersCheck()
 }
 
 // screen update function
@@ -99,6 +100,21 @@ function checkAppleCollision () {
         tailLength++
         speedGame += 0.1
         $score.innerText = scoreCounter++
+    }
+}
+
+// hitting borders function
+function bordersCheck () {
+    if (xPosition > tileCount) {
+        xPosition = 0
+    } else if (xPosition < 0) {
+        xPosition = 20
+    }
+
+    if (yPosition > tileCount) {
+        yPosition = 0
+    }   else if (yPosition < 0) {
+        yPosition = 20
     }
 }
 
