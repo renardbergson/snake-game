@@ -36,6 +36,8 @@ let tailLength = 1
 let $score = document.querySelector('.scoreWrapper span')
 let scoreCounter = 1
 
+// snake sounds
+const gulpSound = new Audio('audio/gulpSound.mp3')
 
 // draw game loop                                    
 function drawGame () {
@@ -61,7 +63,7 @@ function isGameOver() {
     // if the game hasn't started
     if (xMovement === 0 && yMovement === 0) {
         gameOver = false
-        return gameOver
+        return 
     }
 
     // walls colision
@@ -148,6 +150,7 @@ function checkAppleCollision () {
         tailLength++
         speedGame += 0.1
         $score.innerText = scoreCounter++
+        gulpSound.play()
     }
 }
 
