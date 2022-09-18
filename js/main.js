@@ -39,13 +39,44 @@ let scoreCounter = 1
 
 // draw game loop                                    
 function drawGame () {
-    setTimeout(drawGame, 1000 / speedGame)
+    changeSnakePosition()   // having this function firstly makes the game over conditions be satisfied instantly
+    
+    let result = isGameOver()
+    if (result === true) {
+        return              // this is gonna stop the draw game loop and no longer execute the other functions
+    }
+    
     screenUpdate()   
-    drawApple()      
-    drawSnake()             // ordering the elements correctly is important
-    changeSnakePosition()
     checkAppleCollision()
-    bordersCheck()
+    drawApple()             // the order of the functions modifies the game !!!
+    drawSnake()          
+    
+    setTimeout(drawGame, 1000 / speedGame)
+}
+
+// game over conditions function
+function isGameOver() {
+    let gameOver = false
+
+    if (xPosition < 0) {
+        gameOver = true
+    } else if (xPosition === tileCount) {
+        gameOver = true
+    } else if (yPosition < 0) {
+        gameOver = true
+    } else if (yPosition === tileCount) {
+        gameOver = true
+    }
+
+    if (gameOver === true) {
+        const $gameOver = document.querySelector('.gameOver')
+        $gameOver.classList.add('visible')
+
+        const $pressAnyKey = document.querySelector('.pressAnykey')
+        $pressAnyKey.classList.add('visible')
+    }
+    
+    return gameOver
 }
 
 // screen update function
@@ -103,8 +134,8 @@ function checkAppleCollision () {
     }
 }
 
-// hitting borders function
-function bordersCheck () {
+// hitting walls function
+/* function bordersCheck () {
     if (xPosition > tileCount) {
         xPosition = 0
     } else if (xPosition < 0) {
@@ -116,7 +147,7 @@ function bordersCheck () {
     }   else if (yPosition < 0) {
         yPosition = 20
     }
-}
+} */
 
 // keyDown listener and functions
 document.body.addEventListener('keydown', keyDown)

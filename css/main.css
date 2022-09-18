@@ -15,6 +15,23 @@ body {
   font-family: "Press Start 2P", cursive;
 }
 
+@-webkit-keyframes flashing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flashing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .workSpace {
   position: relative;
 }
@@ -34,4 +51,31 @@ body {
 }
 .workSpace .scoreWrapper span {
   margin-top: 2px;
+}
+.workSpace .gameOver {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-46%, -50%);
+  color: #bfd3bf;
+  font-size: 15pt;
+  transition: 400ms linear;
+}
+.workSpace .gameOver.visible {
+  display: block;
+  top: 50%;
+}
+.workSpace .pressAnykey {
+  color: #bfd3bf;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  font-size: 8pt;
+  transform: translate(-45%);
+}
+.workSpace .pressAnykey.visible {
+  transition: 400ms linear;
+  bottom: 40%;
+  -webkit-animation: flashing 200ms infinite 500ms;
+          animation: flashing 200ms infinite 500ms;
 }/*# sourceMappingURL=main.css.map */

@@ -1,4 +1,6 @@
 @import 'base.scss';
+@import 'variables.scss';
+@import 'animations.scss';
 
 .workSpace {
     position: relative;
@@ -22,6 +24,36 @@
 
         span {
             margin-top: 2px;
+        }
+    }
+
+    .gameOver {
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        transform: translate(-46%, -50%);
+        color: $game-over-colors;
+        font-size: 15pt;
+        transition: 400ms linear;
+        
+        &.visible {
+            display: block;
+            top: 50%;
+        }
+    }
+
+    .pressAnykey {
+        color: $game-over-colors;
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        font-size: 8pt;
+        transform: translate(-45%);
+
+        &.visible {
+            transition: 400ms linear;
+            bottom: 40%;
+            animation: flashing 200ms infinite 500ms;
         }
     }
 }
