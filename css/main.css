@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Press Start 2P", cursive;
+  font-size: 15pt;
 }
 
 @-webkit-keyframes flashing {
@@ -51,6 +53,32 @@ body {
 }
 .workSpace .scoreWrapper span {
   margin-top: 2px;
+  font-size: 0.8em;
+}
+.workSpace .whoAmI {
+  margin-top: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0.8;
+}
+.workSpace .whoAmI:hover {
+  text-shadow: 0 0 10px white;
+}
+.workSpace .whoAmI a {
+  display: flex;
+  color: black;
+  font-size: 0.5em;
+}
+.workSpace .whoAmI a .githubIcon {
+  font-size: 1.2em;
+}
+.workSpace .whoAmI a p {
+  margin-left: 7px;
+}
+.workSpace .whoAmI a:hover {
+  -webkit-animation: flashing 400ms infinite;
+          animation: flashing 400ms infinite;
 }
 .workSpace .gameOver {
   position: absolute;
@@ -58,7 +86,6 @@ body {
   left: 50%;
   transform: translate(-46%, -50%);
   color: #bfd3bf;
-  font-size: 15pt;
   transition: 400ms linear;
 }
 .workSpace .gameOver.visible {
@@ -71,7 +98,7 @@ body {
   position: absolute;
   bottom: -10%;
   left: 50%;
-  font-size: 8pt;
+  font-size: 0.5em;
   transform: translate(-46%);
 }
 .workSpace .pressAnykey.visible {

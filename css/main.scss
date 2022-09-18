@@ -24,6 +24,35 @@
 
         span {
             margin-top: 2px;
+            font-size: $secondary-font-size + 0.3;
+        }
+    }
+
+    .whoAmI {        
+        margin-top: 5px;
+        width: fit-content;
+        opacity: 0.8;
+
+        &:hover {
+            text-shadow: 0 0 10px white;
+        }
+
+        a {
+            display: flex;
+            color: black;
+            font-size: $secondary-font-size;
+
+            .githubIcon {
+                font-size: $secondary-font-size + 0.7;
+            }
+
+            p {
+                margin-left: 7px;
+            }
+
+            &:hover {
+                animation: flashing 400ms infinite;
+            }
         }
     }
 
@@ -33,7 +62,6 @@
         left: 50%;
         transform: translate(-46%, -50%);
         color: $game-over-colors;
-        font-size: 15pt;
         transition: 400ms linear;
         
         &.visible {
@@ -48,7 +76,7 @@
         position: absolute;
         bottom: -10%;
         left: 50%;
-        font-size: 8pt;
+        font-size: $secondary-font-size;
         transform: translate(-46%);
 
         &.visible {
