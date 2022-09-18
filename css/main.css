@@ -87,24 +87,30 @@ body {
   transform: translate(-46%, -50%);
   color: #bfd3bf;
   transition: 400ms linear;
+  min-width: 100%;
+  margin-left: -15px;
+  text-align: center;
+  font-size: 1.2em;
 }
 .workSpace .gameOver.visible {
   display: block;
   top: 50%;
-  text-shadow: 0 0 10px black;
+  text-shadow: 2px 2px 10px black;
 }
-.workSpace .pressAnykey {
+.workSpace .pressSpace {
   color: #bfd3bf;
   position: absolute;
   bottom: -10%;
   left: 50%;
   font-size: 0.5em;
-  transform: translate(-46%);
+  transform: translate(-50%);
+  min-width: 100%;
+  text-align: center;
 }
-.workSpace .pressAnykey.visible {
+.workSpace .pressSpace.visible {
   transition: 400ms linear;
   bottom: 40%;
   -webkit-animation: flashing 400ms infinite 500ms;
           animation: flashing 400ms infinite 500ms;
-  text-shadow: 0 0 10px black;
+  text-shadow: 2px 2px 10px black;
 }/*# sourceMappingURL=main.css.map */

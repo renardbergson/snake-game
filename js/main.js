@@ -101,8 +101,8 @@ function isGameOver() {
         const $gameOver = document.querySelector('.gameOver')
         $gameOver.classList.add('visible')
 
-        const $pressAnyKey = document.querySelector('.pressAnykey')
-        $pressAnyKey.classList.add('visible')
+        const $pressSpace = document.querySelector('.pressSpace')
+        $pressSpace.classList.add('visible')
     }
     
     return gameOver

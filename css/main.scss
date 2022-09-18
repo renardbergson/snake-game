@@ -63,27 +63,33 @@
         transform: translate(-46%, -50%);
         color: $game-over-colors;
         transition: 400ms linear;
+        min-width: 100%;
+        margin-left: -15px;
+        text-align: center;
+        font-size: 1.2em;
         
         &.visible {
             display: block;
             top: 50%;
-            text-shadow: 0 0 10px black;
+            text-shadow: $game-over-font-shadow;
         }
     }
 
-    .pressAnykey {
+    .pressSpace {
         color: $game-over-colors;
         position: absolute;
         bottom: -10%;
         left: 50%;
         font-size: $secondary-font-size;
-        transform: translate(-46%);
+        transform: translate(-50%);
+        min-width: 100%;
+        text-align: center;
 
         &.visible {
             transition: 400ms linear;
             bottom: 40%;
             animation: flashing 400ms infinite 500ms;
-            text-shadow: 0 0 10px black;
+            text-shadow: $game-over-font-shadow;
         }
     }
 }
