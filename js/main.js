@@ -58,6 +58,13 @@ function drawGame () {
 function isGameOver() {
     let gameOver = false
 
+    // if the game hasn't started
+    if (xMovement === 0 && yMovement === 0) {
+        gameOver = false
+        return gameOver
+    }
+
+    // walls colision
     if (xPosition < 0) {
         gameOver = true
     } else if (xPosition === tileCount) {
@@ -68,6 +75,16 @@ function isGameOver() {
         gameOver = true
     }
 
+    // body colision
+     for (let i = 0; i < snakeParts.length; i++) {
+        let part = snakeParts[i]
+        if (part._x === xPosition && part._y === yPosition) {
+            gameOver = true
+            break
+        }
+    } 
+
+    // game over text
     if (gameOver === true) {
         const $gameOver = document.querySelector('.gameOver')
         $gameOver.classList.add('visible')
