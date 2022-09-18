@@ -39,6 +39,7 @@
         &.visible {
             display: block;
             top: 50%;
+            text-shadow: 0 0 10px black;
         }
     }
 
@@ -48,12 +49,13 @@
         bottom: -10%;
         left: 50%;
         font-size: 8pt;
-        transform: translate(-45%);
+        transform: translate(-46%);
 
         &.visible {
             transition: 400ms linear;
             bottom: 40%;
-            animation: flashing 200ms infinite 500ms;
+            animation: flashing 400ms infinite 500ms;
+            text-shadow: 0 0 10px black;
         }
     }
 }

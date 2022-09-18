@@ -64,6 +64,7 @@ body {
 .workSpace .gameOver.visible {
   display: block;
   top: 50%;
+  text-shadow: 0 0 10px black;
 }
 .workSpace .pressAnykey {
   color: #bfd3bf;
@@ -71,11 +72,12 @@ body {
   bottom: -10%;
   left: 50%;
   font-size: 8pt;
-  transform: translate(-45%);
+  transform: translate(-46%);
 }
 .workSpace .pressAnykey.visible {
   transition: 400ms linear;
   bottom: 40%;
-  -webkit-animation: flashing 200ms infinite 500ms;
-          animation: flashing 200ms infinite 500ms;
+  -webkit-animation: flashing 400ms infinite 500ms;
+          animation: flashing 400ms infinite 500ms;
+  text-shadow: 0 0 10px black;
 }/*# sourceMappingURL=main.css.map */
