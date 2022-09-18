@@ -36,8 +36,9 @@ let tailLength = 1
 let $score = document.querySelector('.scoreWrapper span')
 let scoreCounter = 1
 
-// snake sounds
+// game sounds
 const gulpSound = new Audio('audio/gulpSound.mp3')
+const gameOverSound = new Audio('audio/gameOverSound.mp3')
 
 // draw game loop                                    
 function drawGame () {
@@ -45,6 +46,15 @@ function drawGame () {
     
     let result = isGameOver()
     if (result === true) {
+        
+        gameOverSound.play()
+        
+        document.addEventListener('keydown', (event) => {
+            if (event.key === ' ') {
+                location.reload()
+            }
+        })
+
         return              // this is gonna stop the draw game loop and no longer execute the other functions
     }
     
@@ -170,10 +180,10 @@ function checkAppleCollision () {
 } */
 
 // keyDown listener and functions
-document.body.addEventListener('keydown', keyDown)
+document.addEventListener('keydown', keyDown)
 function keyDown (event) {
     // Up
-    if (event.keyCode === 38) {
+    if (event.key === 'ArrowUp') {
         if (yMovement === 1) // here, we're talking about what happens when we press the arrow down key 
             return           // so, if we're moving down (Y = 1), don't read this block of code
         yMovement = -1 // the Y angle has value zero in the center and decreases when goind up
@@ -181,7 +191,7 @@ function keyDown (event) {
     }
     
     // Down
-    if (event.keyCode === 40) {
+    if (event.key === 'ArrowDown') {
         if (yMovement === -1) // if we're moving up (Y = -1), don't read this block of code
             return
         yMovement = 1 
@@ -189,7 +199,7 @@ function keyDown (event) {
     }
 
     // Left
-    if (event.keyCode === 37) {
+    if (event.key === 'ArrowLeft') {
         if (xMovement === 1) // if we're moving right (X = 1), don't read this block of code
             return
         yMovement = 0
@@ -197,7 +207,7 @@ function keyDown (event) {
     }
 
     // Right
-    if (event.keyCode === 39) {
+    if (event.key === 'ArrowRight') {
         if (xMovement === -1) // if we're moving left (X = -1), don't read this block of code
             return
         yMovement = 0
