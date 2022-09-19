@@ -118,10 +118,12 @@ function screenUpdate () {
 // draw snake
 function drawSnake () {
     // ******************************************** BODY ********************************************
-    ctx.fillStyle = 'orange'
+    const snakeBody = new Image()
+    snakeBody.src = 'img/snakeBody.png'
+    
     for(let i = 0; i < snakeParts.length; i++) {
         let part = snakeParts[i]
-        ctx.fillRect(part._x * tileCount, part._y * tileCount, tileSize, tileSize)
+        ctx.drawImage(snakeBody, part._x * tileCount, part._y * tileCount, tileSize, tileSize)
     }            
     
     snakeParts.push(new snakePart(xPosition, yPosition)) // the push function adds an element into an array
@@ -131,8 +133,9 @@ function drawSnake () {
     }                                     // the last part added is always the nearest of the snake head! 
 
     // ******************************************** HEAD ********************************************
-    ctx.fillStyle = 'black'                         
-    ctx.fillRect(xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)      
+    const snakeHead = new Image()
+    snakeHead.src = 'img/snake-head.png'
+    ctx.drawImage(snakeHead, xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)    
     // multiplying the position by the number of tiles gives us the right number of possibilities 
     // for X and Y
 }
@@ -163,21 +166,6 @@ function checkAppleCollision () {
         gulpSound.play()
     }
 }
-
-// hitting walls function
-/* function bordersCheck () {
-    if (xPosition > tileCount) {
-        xPosition = 0
-    } else if (xPosition < 0) {
-        xPosition = 20
-    }
-
-    if (yPosition > tileCount) {
-        yPosition = 0
-    }   else if (yPosition < 0) {
-        yPosition = 20
-    }
-} */
 
 // keyDown listener and functions
 document.addEventListener('keydown', keyDown)

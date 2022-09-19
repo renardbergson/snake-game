@@ -38,7 +38,7 @@ body {
   position: relative;
 }
 .workSpace .stage {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3411764706);
 }
 .workSpace .scoreWrapper {
   display: flex;
@@ -56,7 +56,7 @@ body {
   font-size: 0.8em;
 }
 .workSpace .whoAmI {
-  margin-top: 5px;
+  margin-top: 7px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
