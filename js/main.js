@@ -7,7 +7,7 @@ let speedGame = 5
 
 // tile settings
 let tileCount = 20
-let tileSize = $canvas.width / tileCount - 2 // the subtraction separates the tiles from each other           
+let tileSize = $canvas.width / tileCount        
 
 // snake position and movement variables
 let xPosition = 10                                                
@@ -39,6 +39,9 @@ let scoreCounter = 1
 // game sounds
 const gulpSound = new Audio('audio/gulpSound.mp3')
 const gameOverSound = new Audio('audio/gameOverSound.mp3')
+
+// snake head src controller
+let snakeHeadSrc = 'img/snake-head-up.png'
 
 // draw game loop                                    
 function drawGame () {
@@ -134,8 +137,8 @@ function drawSnake () {
 
     // ******************************************** HEAD ********************************************
     const snakeHead = new Image()
-    snakeHead.src = 'img/snake-head.png'
-    ctx.drawImage(snakeHead, xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)    
+    snakeHead.src = snakeHeadSrc
+    ctx.drawImage(snakeHead, xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)
     // multiplying the position by the number of tiles gives us the right number of possibilities 
     // for X and Y
 }
@@ -176,6 +179,8 @@ function keyDown (event) {
             return           // so, if we're moving down (Y = 1), don't read this block of code
         yMovement = -1 // the Y angle has value zero in the center and decreases when goind up
         xMovement = 0 // we wanna do nothing with X angle when pressing arrow up key 
+
+        snakeHeadSrc = 'img/snake-head-up.png'              // snake head controller
     }
     
     // Down
@@ -184,6 +189,8 @@ function keyDown (event) {
             return
         yMovement = 1 
         xMovement = 0 
+
+        snakeHeadSrc = 'img/snake-head-down.png'            // snake head controller
     }
 
     // Left
@@ -192,6 +199,8 @@ function keyDown (event) {
             return
         yMovement = 0
         xMovement = -1
+
+        snakeHeadSrc = 'img/snake-head-left.png'            // snake head controller
     }
 
     // Right
@@ -200,6 +209,8 @@ function keyDown (event) {
             return
         yMovement = 0
         xMovement = 1
+
+        snakeHeadSrc = 'img/snake-head-right.png'           // snake head controller
     }
 }
 
