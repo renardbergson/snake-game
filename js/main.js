@@ -48,20 +48,23 @@ document.body.onload = () => {
     const $welcome = document.querySelector('.welcome')
     $welcome.classList.add('visible')
 
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', function spaceToStart(e) {
         if (e.key === ' ') {
             drawGame()
             $welcome.classList.remove('visible')
+            document.removeEventListener('keydown', spaceToStart)
         }
     })
 }
 
 // draw game loop                                    
-function drawGame () {
+function drawGame () {    
     changeSnakePosition()   // having this function firstly makes the game over conditions be satisfied instantly
+    document.addEventListener('keydown', keyDown)
     
     let result = isGameOver()
     if (result === true) {
+        document.removeEventListener('keydown', keyDown) // if it's game over, we stop listening the those keys
         
         gameOverSound.play()
         
@@ -73,7 +76,7 @@ function drawGame () {
 
         return              // this is gonna stop the draw game loop and no longer execute the other functions
     }
-    
+
     screenUpdate()   
     checkAppleCollision()
     drawApple()             // the order of the functions modifies the game !!!
@@ -184,9 +187,10 @@ function checkAppleCollision () {
     }
 }
 
-// keyDown listeners and function
-document.addEventListener('keydown', keyDown)
+// keyDown listeners function
 function keyDown (event) {
+    // console.log(xMovement, yMovement)  *** (to check em remove eventual bugs) ***
+
     // Up
     if (event.key === 'ArrowUp' || event.key === 'w') {
         if (yMovement === 1) // here, we're talking about what happens when we press the arrow down key 
