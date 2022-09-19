@@ -1,11 +1,11 @@
-// getting canva and it's context
+// canvas selecting and getting context variables
 const $canvas = document.querySelector('.stage')
 const ctx = $canvas.getContext('2d')
 
-//speed game
+//speed game variable
 let speedGame = 5
 
-// tile settings
+// tile settings variables
 let tileCount = 20
 let tileSize = $canvas.width / tileCount        
 
@@ -32,16 +32,29 @@ class snakePart {
 let snakeParts = []
 let tailLength = 1
 
-// score 
+// score variables
 let $score = document.querySelector('.scoreWrapper span')
 let scoreCounter = 1
 
-// game sounds
+// game sound variables
 const gulpSound = new Audio('audio/gulpSound.mp3')
 const gameOverSound = new Audio('audio/gameOverSound.mp3')
 
-// snake head src controller
+// snake head src controller variable
 let snakeHeadSrc = 'img/snake-head-up.png'
+
+// welcome function
+document.body.onload = () => {
+    const $welcome = document.querySelector('.welcome')
+    $welcome.classList.add('visible')
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === ' ') {
+            drawGame()
+            $welcome.classList.remove('visible')
+        }
+    })
+}
 
 // draw game loop                                    
 function drawGame () {
@@ -118,7 +131,7 @@ function screenUpdate () {
     ctx.drawImage(background, 0, 0) // this function avoids the snake path remains on the screen 
 }
 
-// draw snake
+// draw snake function
 function drawSnake () {
     // ******************************************** BODY ********************************************
     const snakeBody = new Image()
@@ -143,7 +156,7 @@ function drawSnake () {
     // for X and Y
 }
 
-// draw Apple
+// draw Apple function
 function drawApple () {
     const apple = new Image()
     apple.src = 'img/apple.png'
@@ -156,6 +169,7 @@ function changeSnakePosition () {
     yPosition += yMovement
 }
 
+// check apple collision function
 function checkAppleCollision () {
     if (appleX === xPosition && appleY === yPosition) {
         appleX = parseInt(Math.random() * tileCount)
@@ -170,7 +184,7 @@ function checkAppleCollision () {
     }
 }
 
-// keyDown listener and functions
+// keyDown listeners and function
 document.addEventListener('keydown', keyDown)
 function keyDown (event) {
     // Up
@@ -213,5 +227,3 @@ function keyDown (event) {
         snakeHeadSrc = 'img/snake-head-right.png'           // snake head controller
     }
 }
-
-drawGame()
