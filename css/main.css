@@ -59,14 +59,13 @@ body {
 }
 .workSpace .welcome h5 {
   font-size: 0.45em;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 .workSpace .welcome p {
   font-size: 0.45em;
-  margin: 10px 0;
 }
 .workSpace .welcome img {
-  width: 10px;
+  width: 8px;
   margin: 0 auto;
 }
 .workSpace .welcome .arrowLeftAndRightWrapper {
@@ -74,7 +73,7 @@ body {
   margin: 10px 0;
 }
 .workSpace .welcome .arrowLeftAndRightWrapper img {
-  width: 30px;
+  width: 24px;
 }
 .workSpace .welcome .arrowLeftAndRightWrapper img:first-child {
   margin-right: 30px;
@@ -82,12 +81,19 @@ body {
 .workSpace .welcome .arrowLeftAndRightWrapper img:last-child {
   margin-left: 30px;
 }
-.workSpace .welcome h6 {
+.workSpace .welcome .instructions {
+  margin-top: 20px;
+}
+.workSpace .welcome .instructions p {
+  margin-bottom: 10px;
+}
+.workSpace .welcome .instructions h6 {
   color: lime;
   font-size: 0.45em;
   margin-top: 30px;
   -webkit-animation: flashing 400ms infinite;
           animation: flashing 400ms infinite;
+  letter-spacing: 2px;
 }
 .workSpace .stage {
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3411764706);

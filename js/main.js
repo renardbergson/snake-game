@@ -30,7 +30,7 @@ class snakePart {
 
 // snake body variables
 let snakeParts = []
-let tailLength = 1
+let tailLength = 2
 
 // score variables
 let $score = document.querySelector('.scoreWrapper span')
@@ -188,7 +188,7 @@ function checkAppleCollision () {
 document.addEventListener('keydown', keyDown)
 function keyDown (event) {
     // Up
-    if (event.key === 'ArrowUp') {
+    if (event.key === 'ArrowUp' || event.key === 'w') {
         if (yMovement === 1) // here, we're talking about what happens when we press the arrow down key 
             return           // so, if we're moving down (Y = 1), don't read this block of code
         yMovement = -1 // the Y angle has value zero in the center and decreases when goind up
@@ -198,7 +198,7 @@ function keyDown (event) {
     }
     
     // Down
-    if (event.key === 'ArrowDown') {
+    if (event.key === 'ArrowDown' || event.key === 's') {
         if (yMovement === -1) // if we're moving up (Y = -1), don't read this block of code
             return
         yMovement = 1 
@@ -208,7 +208,7 @@ function keyDown (event) {
     }
 
     // Left
-    if (event.key === 'ArrowLeft') {
+    if (event.key === 'ArrowLeft' || event.key === 'a') {
         if (xMovement === 1) // if we're moving right (X = 1), don't read this block of code
             return
         yMovement = 0
@@ -218,7 +218,7 @@ function keyDown (event) {
     }
 
     // Right
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'ArrowRight' || event.key === 'd') {
         if (xMovement === -1) // if we're moving left (X = -1), don't read this block of code
             return
         yMovement = 0

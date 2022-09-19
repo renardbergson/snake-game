@@ -28,16 +28,15 @@
 
         h5 {
             font-size: $welcome-instructions-font-size;
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         p {
             font-size: $welcome-instructions-font-size;
-            margin: 10px 0;
         }
 
         img {
-            width: 10px;
+            width: 8px;
             margin: 0 auto;
         }
 
@@ -46,7 +45,7 @@
             margin: 10px 0;
             
             img {
-                width: 30px;
+                width: 24px;
 
                 &:first-child {
                     margin-right: 30px;
@@ -58,12 +57,22 @@
             }
         }
 
-        h6 {
-            color: lime;
-            font-size: $welcome-instructions-font-size;
-            margin-top: 30px;
-            animation: flashing 400ms infinite;
+        .instructions {
+            margin-top: 20px;
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            h6 {
+                color: lime;
+                font-size: $welcome-instructions-font-size;
+                margin-top: 30px;
+                animation: flashing 400ms infinite;
+                letter-spacing: 2px;
+            }
         }
+
     }
 
     .stage {
