@@ -4,7 +4,7 @@
 Este projeto é uma releitura do game Snake, um velho conhecido da comunidade gamer e que já entreteve muita gente, desde quando se tornou popular a partir do ano de 1997, época em que começou a vir junto dos antigos celulares Nokia.
 
 ### Objetivos
-Desenvolvi esta aplicação visando desafiar a mim mesmo pois, para desenvolvê-lo, precisei pesquisar e aplicar conceitos até então desconhecidos. Além disso, meu outro objetivo era aprofundar-me mais no JavaScript, desta vez, aplicando essa linguagem no desenvolvimento de um game.
+Desenvolvi esta aplicação visando desafiar a mim mesmo pois, para isso, precisei pesquisar e aplicar conceitos até então desconhecidos. Além disso, meu outro objetivo era aprofundar-me mais no JavaScript, desta vez, aplicando essa linguagem no desenvolvimento de um game.
 
 ### O que aprendi
   •	Conceitos básicos sobre Canvas, inserção de figuras e imagens, assim como manipular esses itens via JS <br>
@@ -21,7 +21,7 @@ Desenvolvi esta aplicação visando desafiar a mim mesmo pois, para desenvolvê-
   •	Entender e aplicar a lógica necessária para tornar o game funcional <br>
 
 ### O que está faltando ⚠️
-  •	Implementar a responsividade da página em dispositivos mobile <br>
+  •	Implementar responsividade e funções para dispositivos móveis <br>
   •	Implementar pequenas melhorias funcionais e correção de eventuais bugs <br>
 
 ### Linguagens
@@ -39,7 +39,7 @@ Desenvolvi esta aplicação visando desafiar a mim mesmo pois, para desenvolvê-
   
 ### Preview
 Este é um pequeno preview do game <br>
-![]() 
+![](https://github.com/renardbergson/jogo-da-cobrinha/blob/main/img/snake-gif.gif) 
 
 ### Link
   •	[Snake Game](https://renardbergson.github.io/jogo-da-cobrinha/) 
