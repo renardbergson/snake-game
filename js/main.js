@@ -34,7 +34,7 @@ let tailLength = 2
 
 // score variables
 let $score = document.querySelector('.scoreWrapper span')
-let scoreCounter = 1
+let scoreCounter = 0
 
 // game sound variables
 const gulpSound = new Audio('audio/gulpSound.mp3')
@@ -182,7 +182,8 @@ function checkAppleCollision () {
         // then, we multiply those numbers by the number of tiles
         tailLength++
         speedGame += 0.1
-        $score.innerText = scoreCounter++
+        scoreCounter++
+        $score.innerText = scoreCounter 
         gulpSound.play()
     }
 }
