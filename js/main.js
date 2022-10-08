@@ -98,11 +98,11 @@ function isGameOver() {
     // walls colision
     if (xPosition < 0) {
         gameOver = true
-    } else if (xPosition === tileCount) {
+    } else if (xPosition === tileSize) {
         gameOver = true
     } else if (yPosition < 0) {
         gameOver = true
-    } else if (yPosition === tileCount) {
+    } else if (yPosition === tileSize) {
         gameOver = true
     }
 
