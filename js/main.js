@@ -3,7 +3,7 @@ const $canvas = document.querySelector('.stage')
 const ctx = $canvas.getContext('2d')
 
 //speed game variable
-let speedGame = 5
+let speedGame = 6
 
 // tile settings variables
 let tileCount = 20
@@ -98,11 +98,11 @@ function isGameOver() {
     // walls colision
     if (xPosition < 0) {
         gameOver = true
-    } else if (xPosition === tileSize) {
+    } else if (xPosition === tileCount) {
         gameOver = true
     } else if (yPosition < 0) {
         gameOver = true
-    } else if (yPosition === tileSize) {
+    } else if (yPosition === tileCount) {
         gameOver = true
     }
 
