@@ -153,7 +153,7 @@
         position: absolute;
         bottom: 1%;
         left: 50%;
-        font-size: $secondary-font-size;
+        font-size: $secondary-font-size - 0.5em;
         transform: translate(-50%);
         min-width: 100%;
         text-align: center;
