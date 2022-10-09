@@ -40,11 +40,8 @@ body {
 .workSpace .welcome {
   background: rgba(0, 0, 0, 0.2509803922);
   position: absolute;
-  left: 50%;
-  top: 47%;
-  transform: translate(-50%, -50%);
   width: 100%;
-  height: 94%;
+  height: 94.2%;
   text-align: center;
   color: #bfd3bf;
   text-shadow: 2px 2px 10px black;
