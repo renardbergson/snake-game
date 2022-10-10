@@ -10,6 +10,28 @@
     .stage {
         width: 500px;
         height: 500px;
+
+        // **************************** MEDIA QUERIES ****************************
+        @include devices (tablet) {
+            width: 400px;
+            height: 400px;
+        }
+        @include devices (mobileL) {
+            width: 350px;
+            height: 350px;
+        }
+        @include devices (mobileM) {
+            width: 310px;
+            height: 310px;
+        }
+        @include devices (mobileS) {
+            width: 265px;
+            height: 265px;
+        }
+        @include devices (galaxyFold) {
+            width: 250px;
+            height: 250px;
+        }
     }
 
     .welcome {
@@ -26,21 +48,49 @@
         opacity: 0;
         transition: 800ms linear;
 
+        // **************************** MEDIA QUERIES ****************************
+        @include devices (tablet) {
+            height: 96.2%;
+        }
+        @include devices (mobileL) {
+            height: 95.6%;
+        }
+        @include devices (mobileS) {
+            height: 95%;
+        }
+        @include devices (galaxyFold) {
+            height: 95.7%;
+        }
+
         &.visible {
             opacity: 1;
         }
 
         h4 {
-            font-size: $primary-font-size - 0.5em;
+            margin-left: 10px;
+            font-size: 1.5em;
+
+            // **************************** MEDIA QUERIES ****************************
+            @include devices (mobileL) {
+                font-size: 1.2em;
+            }
         }
 
         h5 {
-            font-size: $welcome-instructions-font-size;
+            font-size: 0.7em;
             margin: 40px 0;
+
+            // **************************** MEDIA QUERIES ****************************
+            @include devices (mobileL) {
+                margin: 30px 0;
+            }
+            @include devices (mobileM) {
+                margin: 20px 0;
+            }
         }
 
         p {
-            font-size: $welcome-instructions-font-size;
+            font-size: 0.7em;
         }
 
         img {
@@ -68,17 +118,34 @@
         .instructions {
             margin-top: 40px;
 
+            // **************************** MEDIA QUERIES ****************************
+            @include devices (mobileL) {
+                margin-top: 30px;
+            }
+            @include devices (mobileM) {
+                margin-top: 20px;
+            }
+
             p {
                 margin-bottom: 10px;
             }
 
             h6 {
                 color: lime;
-                font-size: $welcome-instructions-font-size;
+                font-size: 0.7em;
                 margin-top: 40px;
                 animation: flashing 400ms infinite;
                 letter-spacing: 2px;
+
+                // **************************** MEDIA QUERIES ****************************
+                @include devices (mobileL) {
+                    margin-top: 30px;
+                }
+                @include devices (mobileS) {
+                    margin-top: 20px;
+                }
             }
+
         }
 
     }
@@ -95,15 +162,47 @@
         position: absolute;
         top: -5.5%;
         right: 0%;
+
+        // **************************** MEDIA QUERIES ****************************
+        @include devices (tablet) {
+            top: -6%;
+        }
+        @include devices (mobileL) {
+            top: -6.5%;
+        }
+        @include devices (mobileM) {
+            top: -7%;
+        }
+        @include devices (mobileS) {
+            top: -7.5%;
+        }
+        @include devices (galaxyFold) {
+            top: -7.5%;
+        }
         
         img {
             width: 30px;
-        }
 
+            // **************************** MEDIA QUERIES ****************************
+            @include devices (tablet) {
+                width: 28px;
+            }
+            @include devices (mobileL) {
+                width: 26px;
+            }
+            @include devices (mobileM) {
+                width: 24px;
+            }
+            @include devices (mobileS) {
+                width: 22px;
+            }
+        }
+        
         span {
             margin-top: 2px;
-            font-size: $secondary-font-size - 0.5em;
+            font-size: 1.1em;
         }
+
     }
 
     .whoAmI {        
@@ -119,28 +218,28 @@
         }
 
         i {
-            font-size: $secondary-font-size - 0.6em;
+            font-size: 0.9em;
         }
 
         p {
             margin-left: 10px;
-            font-size: $secondary-font-size - 0.8em;
+            font-size: 0.7em;
         }
     }
 
     .gameOver {
         position: absolute;
         top: -2%;
-        left: 50%;
+        left: 53%;
         transform: translate(-46%, -50%);
         color: $game-stage-text-color;
         transition: 400ms ease;
         min-width: 100%;
         margin-left: -15px;
         text-align: center;
-        font-size: $primary-font-size;
+        font-size: 1.8em;
         opacity: 0;
-        
+
         &.visible {
             display: block;
             top: 45%;
@@ -153,8 +252,8 @@
         color: $game-stage-text-color;
         position: absolute;
         bottom: 1%;
-        left: 50%;
-        font-size: $secondary-font-size - 0.5em;
+        left: 52%;
+        font-size: 0.9em;
         transform: translate(-50%);
         min-width: 100%;
         text-align: center;

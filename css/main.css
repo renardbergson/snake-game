@@ -13,7 +13,27 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: 16px; }
+  font-size: 16px;
+  /* **************************   VERTICAL  ************************** */
+  /* **************************   VERTICAL  ************************** */
+  /* **************************   VERTICAL  ************************** */
+  /* **************************   VERTICAL  ************************** */
+  /* **************************   VERTICAL  ************************** */ }
+  @media (max-width: 768px) {
+    body {
+      font-size: 12px; } }
+  @media (max-width: 425px) {
+    body {
+      font-size: 12px; } }
+  @media (max-width: 375px) {
+    body {
+      font-size: 10px; } }
+  @media (max-width: 320px) {
+    body {
+      font-size: 8px; } }
+  @media (max-width: 280px) {
+    body {
+      font-size: 7px; } }
 
 @keyframes flashing {
   from {
@@ -25,7 +45,32 @@ body {
   top: 2%; }
   .workSpace .stage {
     width: 500px;
-    height: 500px; }
+    height: 500px;
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */ }
+    @media (max-width: 768px) {
+      .workSpace .stage {
+        width: 400px;
+        height: 400px; } }
+    @media (max-width: 425px) {
+      .workSpace .stage {
+        width: 350px;
+        height: 350px; } }
+    @media (max-width: 375px) {
+      .workSpace .stage {
+        width: 310px;
+        height: 310px; } }
+    @media (max-width: 320px) {
+      .workSpace .stage {
+        width: 265px;
+        height: 265px; } }
+    @media (max-width: 280px) {
+      .workSpace .stage {
+        width: 250px;
+        height: 250px; } }
   .workSpace .welcome {
     background: #00000040;
     position: absolute;
@@ -38,14 +83,43 @@ body {
     flex-direction: column;
     justify-content: center;
     opacity: 0;
-    transition: 800ms linear; }
+    transition: 800ms linear;
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */ }
+    @media (max-width: 768px) {
+      .workSpace .welcome {
+        height: 96.2%; } }
+    @media (max-width: 425px) {
+      .workSpace .welcome {
+        height: 95.6%; } }
+    @media (max-width: 320px) {
+      .workSpace .welcome {
+        height: 95%; } }
+    @media (max-width: 280px) {
+      .workSpace .welcome {
+        height: 95.7%; } }
     .workSpace .welcome.visible {
       opacity: 1; }
     .workSpace .welcome h4 {
-      font-size: 1.5em; }
+      margin-left: 10px;
+      font-size: 1.5em;
+      /* **************************   VERTICAL  ************************** */ }
+      @media (max-width: 425px) {
+        .workSpace .welcome h4 {
+          font-size: 1.2em; } }
     .workSpace .welcome h5 {
       font-size: 0.7em;
-      margin: 40px 0; }
+      margin: 40px 0;
+      /* **************************   VERTICAL  ************************** */
+      /* **************************   VERTICAL  ************************** */ }
+      @media (max-width: 425px) {
+        .workSpace .welcome h5 {
+          margin: 30px 0; } }
+      @media (max-width: 375px) {
+        .workSpace .welcome h5 {
+          margin: 20px 0; } }
     .workSpace .welcome p {
       font-size: 0.7em; }
     .workSpace .welcome img {
@@ -61,7 +135,15 @@ body {
         .workSpace .welcome .arrowLeftAndRightWrapper img:last-child {
           margin-left: 30px; }
     .workSpace .welcome .instructions {
-      margin-top: 40px; }
+      margin-top: 40px;
+      /* **************************   VERTICAL  ************************** */
+      /* **************************   VERTICAL  ************************** */ }
+      @media (max-width: 425px) {
+        .workSpace .welcome .instructions {
+          margin-top: 30px; } }
+      @media (max-width: 375px) {
+        .workSpace .welcome .instructions {
+          margin-top: 20px; } }
       .workSpace .welcome .instructions p {
         margin-bottom: 10px; }
       .workSpace .welcome .instructions h6 {
@@ -69,7 +151,15 @@ body {
         font-size: 0.7em;
         margin-top: 40px;
         animation: flashing 400ms infinite;
-        letter-spacing: 2px; }
+        letter-spacing: 2px;
+        /* **************************   VERTICAL  ************************** */
+        /* **************************   VERTICAL  ************************** */ }
+        @media (max-width: 425px) {
+          .workSpace .welcome .instructions h6 {
+            margin-top: 30px; } }
+        @media (max-width: 320px) {
+          .workSpace .welcome .instructions h6 {
+            margin-top: 20px; } }
   .workSpace .stage {
     box-shadow: 5px 5px 20px #00000057;
     background-image: url(../img/grass.png); }
@@ -79,12 +169,48 @@ body {
     justify-content: center;
     position: absolute;
     top: -5.5%;
-    right: 0%; }
+    right: 0%;
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */
+    /* **************************   VERTICAL  ************************** */ }
+    @media (max-width: 768px) {
+      .workSpace .scoreWrapper {
+        top: -6%; } }
+    @media (max-width: 425px) {
+      .workSpace .scoreWrapper {
+        top: -6.5%; } }
+    @media (max-width: 375px) {
+      .workSpace .scoreWrapper {
+        top: -7%; } }
+    @media (max-width: 320px) {
+      .workSpace .scoreWrapper {
+        top: -7.5%; } }
+    @media (max-width: 280px) {
+      .workSpace .scoreWrapper {
+        top: -7.5%; } }
     .workSpace .scoreWrapper img {
-      width: 30px; }
+      width: 30px;
+      /* **************************   VERTICAL  ************************** */
+      /* **************************   VERTICAL  ************************** */
+      /* **************************   VERTICAL  ************************** */
+      /* **************************   VERTICAL  ************************** */ }
+      @media (max-width: 768px) {
+        .workSpace .scoreWrapper img {
+          width: 28px; } }
+      @media (max-width: 425px) {
+        .workSpace .scoreWrapper img {
+          width: 26px; } }
+      @media (max-width: 375px) {
+        .workSpace .scoreWrapper img {
+          width: 24px; } }
+      @media (max-width: 320px) {
+        .workSpace .scoreWrapper img {
+          width: 22px; } }
     .workSpace .scoreWrapper span {
       margin-top: 2px;
-      font-size: 1em; }
+      font-size: 1.1em; }
   .workSpace .whoAmI {
     margin-top: 5px;
     width: fit-content;
@@ -102,14 +228,14 @@ body {
   .workSpace .gameOver {
     position: absolute;
     top: -2%;
-    left: 50%;
+    left: 53%;
     transform: translate(-46%, -50%);
     color: #bfd3bf;
     transition: 400ms ease;
     min-width: 100%;
     margin-left: -15px;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.8em;
     opacity: 0; }
     .workSpace .gameOver.visible {
       display: block;
@@ -120,8 +246,8 @@ body {
     color: #bfd3bf;
     position: absolute;
     bottom: 1%;
-    left: 50%;
-    font-size: 1em;
+    left: 52%;
+    font-size: 0.9em;
     transform: translate(-50%);
     min-width: 100%;
     text-align: center;

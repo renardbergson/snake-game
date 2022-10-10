@@ -24,4 +24,10 @@
             @content
         }
     };
+
+    @if $breakpoint == galaxyFold {
+        @media (max-width: 280px) {
+            @content
+        }
+    };
 }
