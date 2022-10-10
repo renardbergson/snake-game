@@ -14,6 +14,7 @@ body {
   align-items: center;
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
+  touch-action: pinch-zoom;
   /* **************************   VERTICAL  ************************** */
   /* **************************   VERTICAL  ************************** */
   /* **************************   VERTICAL  ************************** */
@@ -41,8 +42,7 @@ body {
   to {
     opacity: 1; } }
 .workSpace {
-  position: relative;
-  top: 2%; }
+  position: relative; }
   .workSpace .stage {
     width: 500px;
     height: 500px;
@@ -120,6 +120,17 @@ body {
       @media (max-width: 375px) {
         .workSpace .welcome h5 {
           margin: 20px 0; } }
+      .workSpace .welcome h5 span:first-child {
+        /* **************************   VERTICAL  ************************** */ }
+        @media (max-width: 425px) {
+          .workSpace .welcome h5 span:first-child {
+            display: none; } }
+      .workSpace .welcome h5 span:last-child {
+        display: none;
+        /* **************************   VERTICAL  ************************** */ }
+        @media (max-width: 425px) {
+          .workSpace .welcome h5 span:last-child {
+            display: block; } }
     .workSpace .welcome p {
       font-size: 0.7em; }
     .workSpace .welcome img {
@@ -146,6 +157,17 @@ body {
           margin-top: 20px; } }
       .workSpace .welcome .instructions p {
         margin-bottom: 10px; }
+        .workSpace .welcome .instructions p:nth-child(3) {
+          /* **************************   VERTICAL  ************************** */ }
+          @media (max-width: 425px) {
+            .workSpace .welcome .instructions p:nth-child(3) {
+              display: none; } }
+        .workSpace .welcome .instructions p:nth-child(4) {
+          display: none;
+          /* **************************   VERTICAL  ************************** */ }
+          @media (max-width: 425px) {
+            .workSpace .welcome .instructions p:nth-child(4) {
+              display: block; } }
       .workSpace .welcome .instructions h6 {
         color: lime;
         font-size: 0.7em;
@@ -160,6 +182,17 @@ body {
         @media (max-width: 320px) {
           .workSpace .welcome .instructions h6 {
             margin-top: 20px; } }
+        .workSpace .welcome .instructions h6 span:first-child {
+          /* **************************   VERTICAL  ************************** */ }
+          @media (max-width: 425px) {
+            .workSpace .welcome .instructions h6 span:first-child {
+              display: none; } }
+        .workSpace .welcome .instructions h6 span:last-child {
+          display: none;
+          /* **************************   VERTICAL  ************************** */ }
+          @media (max-width: 425px) {
+            .workSpace .welcome .instructions h6 span:last-child {
+              display: block; } }
   .workSpace .stage {
     box-shadow: 5px 5px 20px #00000057;
     background-image: url(../img/grass.png); }
@@ -262,19 +295,58 @@ body {
 .controls {
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
   display: none;
+  opacity: 0.8;
+  font-size: 2.4em;
+  margin-top: 1.5em;
   /* **************************   VERTICAL  ************************** */ }
   @media (max-width: 425px) {
     .controls {
-      display: flex; } }
-  .controls .startBtn {
-    margin-bottom: 30px; }
+      display: flex;
+      align-items: center; } }
+  .controls .upBtn {
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: inherit; }
   .controls div {
-    margin: 10px 0; }
-    .controls div button:nth-child(1) {
-      margin-right: 20px; }
-    .controls div button:nth-child(2) {
-      margin-left: 20px; }
+    margin: 0.7em 0;
+    display: flex;
+    align-items: center; }
+    .controls div .leftBtn {
+      margin-right: 1em;
+      background: transparent;
+      border: none;
+      color: black;
+      font-size: inherit; }
+    .controls div .startBtn {
+      background-color: black;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      font-size: 0.4em;
+      /* **************************   VERTICAL  ************************** */
+      /* **************************   VERTICAL  ************************** */ }
+      @media (max-width: 375px) {
+        .controls div .startBtn {
+          width: 35px;
+          height: 35px; } }
+      @media (max-width: 320px) {
+        .controls div .startBtn {
+          width: 30px;
+          height: 30px; } }
+    .controls div .rightBtn {
+      margin-left: 1em;
+      background: transparent;
+      border: none;
+      color: black;
+      font-size: inherit; }
+  .controls .downBtn {
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: inherit; }
 
 /*# sourceMappingURL=main.css.map */

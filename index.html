@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
@@ -16,8 +16,13 @@
         <div class="welcome">
             <h4>Bem-vindo ao Snake!</h4>
             <h5>
-                Use as setas direcionais ou <br><br>
-                W, A, S, D para mover-se 
+                <span>
+                    Use as setas direcionais ou <br><br>
+                    W, A, S, D para mover-se 
+                </span>
+                <span>
+                    Use os botões de seta para mover-se
+                </span>
             </h5>
             
             <img src="img/arrowUp-gif.gif" alt="arrowUp">
@@ -40,8 +45,18 @@
                     - Ative a reprodução automática <br>
                     de sons no seu navegador!
                 </p>
+                <p>
+                    - Aumente o volume!
+                </p>
     
-                <h6>Pressione espaço para começar</h6>
+                <h6>
+                    <span>
+                        Pressione espaço para começar
+                    </span> 
+                    <span>
+                        Pressione start para começar
+                    </span> 
+                </h6>
             </div>
         </div>
 
@@ -69,14 +84,25 @@
     </div>
 
     <div class="controls">
-        <button class="startBtn">Start</button>
+        <button class="upBtn">
+            <i class="fa fa-duotone fa-square-caret-up"></i>
+        </button>
 
-        <button>Up</button>
         <div>
-            <button>Left</button>
-            <button>Right</button>
+            <button class="leftBtn">
+                <i class="fa fa-duotone fa-square-caret-left"></i>
+            </button>
+
+            <button class="startBtn">Start</button>
+
+            <button class="rightBtn">
+                <i class="fa fa-duotone fa-square-caret-right"></i>
+            </button>
         </div>
-        <button>Down</button>
+
+        <button class="downBtn">
+            <i class="fa fa-duotone fa-square-caret-down"></i>
+        </button>
     </div>
 
     <script src="js/main.js"></script>

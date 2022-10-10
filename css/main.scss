@@ -5,7 +5,7 @@
 
 .workSpace {
     position: relative;
-    top: 2%;
+    //top: 3em;
 
     .stage {
         width: 500px;
@@ -87,6 +87,24 @@
             @include devices (mobileM) {
                 margin: 20px 0;
             }
+
+            span {
+                &:first-child {
+                    // **************************** MEDIA QUERIES ****************************
+                    @include devices (mobileL) {
+                        display: none;
+                    }
+                }
+
+                &:last-child {
+                    display: none;
+
+                    // **************************** MEDIA QUERIES ****************************
+                    @include devices (mobileL) {
+                        display: block;
+                    }
+                }
+            }
         }
 
         p {
@@ -128,6 +146,22 @@
 
             p {
                 margin-bottom: 10px;
+
+                &:nth-child(3) {
+                    // **************************** MEDIA QUERIES ****************************
+                    @include devices (mobileL) {
+                        display: none;
+                    }
+                }
+
+                &:nth-child(4) {
+                    display: none;
+                    
+                    // **************************** MEDIA QUERIES ****************************
+                    @include devices (mobileL) {
+                        display: block;
+                    }
+                }
             }
 
             h6 {
@@ -143,6 +177,24 @@
                 }
                 @include devices (mobileS) {
                     margin-top: 20px;
+                }
+
+                span {
+                    &:first-child {
+                        // **************************** MEDIA QUERIES ****************************
+                        @include devices (mobileL) {
+                            display: none;
+                        }
+                    }
+
+                    &:last-child {
+                        display: none;
+
+                        // **************************** MEDIA QUERIES ****************************
+                        @include devices (mobileL) {
+                            display: block;
+                        }
+                    }
                 }
             }
 
@@ -270,30 +322,72 @@
 }
 
 .controls {
-    //display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
     display: none;
+    opacity: 0.8;
+    font-size: 2.4em;
+    margin-top: 1.5em;
+
     // **************************** MEDIA QUERIES ****************************
     @include devices (mobileL) {
         display: flex;
+        align-items: center;
     }
 
-    .startBtn {
-        margin-bottom: 30px;
+    .upBtn {
+        border: none;
+        background-color: transparent;
+        color: black;
+        font-size: inherit;
     }
 
     div {
-        margin: 10px 0;
+        margin: 0.7em 0;
+        display: flex;
+        align-items: center;
+        
+        .leftBtn {
+            margin-right: 1em;
+            background: transparent;
+            border: none;
+            color: black;
+            font-size: inherit;
+        }
 
-        button {
-            &:nth-child(1) {
-                margin-right: 20px;
+        .startBtn {
+            background-color: black;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            font-size: 0.4em;
+
+            // **************************** MEDIA QUERIES ****************************
+            @include devices (mobileM) {
+                width: 35px;
+                height: 35px;
             }
-            &:nth-child(2) {
-                margin-left: 20px;
+            @include devices (mobileS) {
+                width: 30px;
+                height: 30px;
             }
         }
+
+        .rightBtn {
+            margin-left: 1em;
+            background: transparent;
+            border: none;
+            color: black;
+            font-size: inherit;
+        }
+    }
+
+    .downBtn {
+        border: none;
+        background-color: transparent;
+        color: black;
+        font-size: inherit;
     }
 }
