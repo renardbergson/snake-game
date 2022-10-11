@@ -8,6 +8,8 @@
     //top: 3em;
 
     .stage {
+        box-shadow: 5px 5px 20px #00000057;
+        background-image: url(../img/grass.png);
         width: 500px;
         height: 500px;
         border-radius: 2%;
@@ -202,11 +204,6 @@
 
         }
 
-    }
-
-    .stage {
-        box-shadow: 5px 5px 20px #00000057;
-        background-image: url(../img/grass.png);
     }
     
     .scoreWrapper {

@@ -51,7 +51,12 @@ const $rightBtn = document.querySelector('.rightBtn')
 const $downBtn = document.querySelector('.downBtn')
 
 // welcome function
-document.body.onload = () => {
+document.body.onload = () => {    
+    if (sessionStorage.getItem('snakeGame')) {
+        drawGame()
+        return
+    } 
+    
     const $welcome = document.querySelector('.welcome')
     $welcome.classList.add('visible')
 
@@ -70,8 +75,6 @@ document.body.onload = () => {
     })
 }
 
-let startGame
-
 // draw game loop                                    
 function drawGame () {    
     changeSnakePosition()   // having this function firstly makes the game over conditions be satisfied instantly
@@ -85,13 +88,15 @@ function drawGame () {
         
         gameOverSound.play()
         
-        document.addEventListener('keydown', (event) => {
+        document.onkeydown = (event) => {
             if (event.key === ' ') {
+                sessionStorage.setItem('snakeGame', 'alreadyOpened') // the session storage let us store key and value in the browser but only while the user not closes the tab
                 location.reload() // this method reloads the document
             }
-        })
+        }
 
         $startBtn.onclick = () => {
+            sessionStorage.setItem('snakeGame', 'alreadyOpened')
             location.reload()
         }
 

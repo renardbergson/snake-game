@@ -44,6 +44,8 @@ body {
 .workSpace {
   position: relative; }
   .workSpace .stage {
+    box-shadow: 5px 5px 20px #00000057;
+    background-image: url(../img/grass.png);
     width: 500px;
     height: 500px;
     border-radius: 2%;
@@ -195,9 +197,6 @@ body {
           @media (max-width: 425px) {
             .workSpace .welcome .instructions h6 span:last-child {
               display: block; } }
-  .workSpace .stage {
-    box-shadow: 5px 5px 20px #00000057;
-    background-image: url(../img/grass.png); }
   .workSpace .scoreWrapper {
     display: flex;
     align-items: center;
