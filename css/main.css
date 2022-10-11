@@ -287,6 +287,17 @@ body {
     min-width: 100%;
     text-align: center;
     opacity: 0; }
+    .workSpace .pressSpace span:first-child {
+      /* **************************   VERTICAL  ************************** */ }
+      @media (max-width: 425px) {
+        .workSpace .pressSpace span:first-child {
+          display: none; } }
+    .workSpace .pressSpace span:last-child {
+      display: none;
+      /* **************************   VERTICAL  ************************** */ }
+      @media (max-width: 425px) {
+        .workSpace .pressSpace span:last-child {
+          display: block; } }
     .workSpace .pressSpace.visible {
       transition: 400ms ease;
       bottom: 45%;

@@ -313,6 +313,25 @@
         text-align: center;
         opacity: 0;
 
+        span {
+            &:first-child {
+                
+                // **************************** MEDIA QUERIES ****************************
+                @include devices (mobileL) {
+                    display: none;
+                }
+            }
+
+            &:last-child {
+                display: none;
+                
+                // **************************** MEDIA QUERIES ****************************
+                @include devices (mobileL) {
+                    display: block;
+                }
+            }
+        }
+
         &.visible {
             transition: 400ms ease;
             bottom: 45%;
