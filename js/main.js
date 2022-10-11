@@ -43,24 +43,41 @@ const gameOverSound = new Audio('audio/gameOverSound.mp3')
 // snake head src controller variable
 let snakeHeadSrc = 'img/snake-head-up.png'
 
+// control buttons variables
+const $startBtn = document.querySelector('.startBtn')
+const $upBtn = document.querySelector('.upBtn')
+const $leftBtn = document.querySelector('.leftBtn')
+const $rightBtn = document.querySelector('.rightBtn')
+const $downBtn = document.querySelector('.downBtn')
+
 // welcome function
 document.body.onload = () => {
     const $welcome = document.querySelector('.welcome')
     $welcome.classList.add('visible')
 
-    document.addEventListener('keydown', function spaceToStart(e) {
+    document.addEventListener('keydown', function spaceToStart (e) {
         if (e.key === ' ') {
             drawGame()
             $welcome.classList.remove('visible')
             document.removeEventListener('keydown', spaceToStart)
         }
     })
+
+    $startBtn.addEventListener('click', function pressToStart () {
+        drawGame()
+        $welcome.classList.remove('visible')
+        $startBtn.removeEventListener('click', pressToStart)
+    })
 }
+
+let startGame
 
 // draw game loop                                    
 function drawGame () {    
     changeSnakePosition()   // having this function firstly makes the game over conditions be satisfied instantly
+    
     document.addEventListener('keydown', keyDown)
+    pressBtn()
     
     let result = isGameOver()
     if (result === true) {
@@ -70,9 +87,13 @@ function drawGame () {
         
         document.addEventListener('keydown', (event) => {
             if (event.key === ' ') {
-                location.reload()
+                location.reload() // this method reloads the document
             }
         })
+
+        $startBtn.onclick = () => {
+            location.reload()
+        }
 
         return              // this is gonna stop the draw game loop and no longer execute the other functions
     }
@@ -190,12 +211,13 @@ function checkAppleCollision () {
 
 // keyDown listeners function
 function keyDown (event) {
-    // console.log(xMovement, yMovement)  *** (to check em remove eventual bugs) ***
+    // console.log(xMovement, yMovement)  *** (to check and remove eventual bugs) ***
 
     // Up
     if (event.key === 'ArrowUp' || event.key === 'w') {
         if (yMovement === 1) // here, we're talking about what happens when we press the arrow down key 
             return           // so, if we're moving down (Y = 1), don't read this block of code
+        
         yMovement = -1 // the Y angle has value zero in the center and decreases when goind up
         xMovement = 0 // we wanna do nothing with X angle when pressing arrow up key 
 
@@ -206,6 +228,7 @@ function keyDown (event) {
     if (event.key === 'ArrowDown' || event.key === 's') {
         if (yMovement === -1) // if we're moving up (Y = -1), don't read this block of code
             return
+            
         yMovement = 1 
         xMovement = 0 
 
@@ -216,6 +239,7 @@ function keyDown (event) {
     if (event.key === 'ArrowLeft' || event.key === 'a') {
         if (xMovement === 1) // if we're moving right (X = 1), don't read this block of code
             return
+
         yMovement = 0
         xMovement = -1
 
@@ -226,9 +250,58 @@ function keyDown (event) {
     if (event.key === 'ArrowRight' || event.key === 'd') {
         if (xMovement === -1) // if we're moving left (X = -1), don't read this block of code
             return
+
         yMovement = 0
         xMovement = 1
 
         snakeHeadSrc = 'img/snake-head-right.png'           // snake head controller
+    }
+}
+
+// direction buttons function
+function pressBtn () {
+
+    // up
+    $upBtn.onclick = () => {
+        if (yMovement === 1) 
+        return 
+
+        yMovement = -1
+        xMovement = 0
+
+        snakeHeadSrc = 'img/snake-head-up.png'             
+    }
+
+    // down
+    $downBtn.onclick = () => {
+        if (yMovement === -1) 
+        return
+
+        yMovement = 1 
+        xMovement = 0 
+
+        snakeHeadSrc = 'img/snake-head-down.png'           
+    }
+
+    // left
+    $leftBtn.onclick = () => {
+        if (xMovement === 1) 
+        return
+
+        yMovement = 0
+        xMovement = -1
+
+        snakeHeadSrc = 'img/snake-head-left.png'         
+    }
+
+    // right
+    $rightBtn.onclick = () => {
+        if (xMovement === -1) 
+        return
+
+        yMovement = 0
+        xMovement = 1
+
+        snakeHeadSrc = 'img/snake-head-right.png'           
     }
 }
