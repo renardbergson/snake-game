@@ -37,6 +37,7 @@ let $score = document.querySelector('.scoreWrapper span')
 let scoreCounter = 0
 
 // game sound variables
+const clickSound = new Audio('audio/clickSound.mp3')
 const gulpSound = new Audio('audio/gulpSound.mp3')
 const gameOverSound = new Audio('audio/gameOverSound.mp3')
 
@@ -268,45 +269,49 @@ function keyDown (event) {
 function pressBtn () {
 
     // up
-    $upBtn.onclick = () => {
+    $upBtn.ontouchstart = () => {
         if (yMovement === 1) 
         return 
 
         yMovement = -1
         xMovement = 0
+        clickSound.play()
 
         snakeHeadSrc = 'img/snake-head-up.png'             
     }
 
     // down
-    $downBtn.onclick = () => {
+    $downBtn.ontouchstart = () => {
         if (yMovement === -1) 
         return
 
         yMovement = 1 
         xMovement = 0 
+        clickSound.play()
 
         snakeHeadSrc = 'img/snake-head-down.png'           
     }
 
     // left
-    $leftBtn.onclick = () => {
+    $leftBtn.ontouchstart = () => {
         if (xMovement === 1) 
         return
 
         yMovement = 0
         xMovement = -1
+        clickSound.play()
 
         snakeHeadSrc = 'img/snake-head-left.png'         
     }
 
     // right
-    $rightBtn.onclick = () => {
+    $rightBtn.ontouchstart = () => {
         if (xMovement === -1) 
         return
 
         yMovement = 0
         xMovement = 1
+        clickSound.play()
 
         snakeHeadSrc = 'img/snake-head-right.png'           
     }
@@ -316,7 +321,7 @@ function pressBtn () {
 const $controls = document.querySelector('.controls')
 $checkbox.onchange = () => {
 
-    if (window.screen.width < 769 && $checkbox.checked === true) {
+    if (window.screen.width < 769 && $checkbox.checked === true) { // we can use window.screen property to access the screen size
         $controls.style.alignSelf = 'end'
         $controls.style.marginRight = '1.7em'
     } else if (window.screen.width < 769 && $checkbox.checked === false) {
