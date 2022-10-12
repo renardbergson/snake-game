@@ -1,7 +1,7 @@
 # Snake Game
 
 ### Descrição
-Este projeto é uma releitura do game Snake, um velho conhecido da comunidade gamer e que já entreteve muita gente, desde quando se tornou popular a partir do ano de 1997, época em que começou a vir junto dos antigos celulares Nokia.
+Este projeto é uma releitura do game Snake, um velho conhecido da comunidade gamer e que já entreteve muita gente, desde quando se tornou popular, aproximadamente a partir do ano de 1997, quando começou a vir junto dos antigos celulares Nokia. A aplicação foi construída para ambiente desktop mas também conta com suporte para tablets e outros dispositivos mobile no modo <i>retrato</i>.
 
 ### Objetivos
 Desenvolvi esta aplicação visando desafiar a mim mesmo pois, para isso, precisei pesquisar e aplicar conceitos até então desconhecidos. Além disso, meu outro objetivo era aprofundar-me mais no JavaScript, desta vez, aplicando essa linguagem no desenvolvimento de um game.
@@ -25,6 +25,11 @@ Desenvolvi esta aplicação visando desafiar a mim mesmo pois, para isso, precis
   •	Entender e aplicar a lógica necessária para tornar o game funcional <br>
   •	Encontrar uma maneira de saber se o usuário já havia passado pela tela de instruções <br>
   •	Implementar um design responsivo com Mixins, através da sintaxe scss <br>
+  
+### Principais funcionalidades
+  •	Design responsivo <br>
+  •	Switch controller para dispositivos com tela tamanho tablet <br>
+  •	Interação com o usuário para mostrar que a aplicação foi pensada para o modo retrato <br>
 
 ### O que está faltando ⚠️
   •	Implementar pequenas melhorias funcionais e correção de eventuais bugs <br>
@@ -42,9 +47,10 @@ Desenvolvi esta aplicação visando desafiar a mim mesmo pois, para isso, precis
 ### Pré requisitos
   •	Um navegador em ambiente desktop ou mobile
   
-### Preview
-Este é um pequeno preview do game <br>
-![](https://github.com/renardbergson/jogo-da-cobrinha/blob/main/img/snake-gif.gif) 
+### Video Preview
+Este é um pequeno preview da aplicação <br>
+
+https://user-images.githubusercontent.com/97261795/195451294-d6b9d2bd-beea-42f7-93d2-85ce093ac3d4.mov
 
 ### Link
   •	[Snake Game](https://renardbergson.github.io/snake-game/) 
