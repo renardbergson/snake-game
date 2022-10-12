@@ -120,7 +120,7 @@ function drawGame () {
         
         document.onkeydown = (event) => {
             if (event.key === ' ') {
-                sessionStorage.setItem('snakeGame', 'alreadyOpened') // the session storage let us store key and value in the browser but only while the user not closes the tab
+                sessionStorage.setItem('snakeGame', 'alreadyOpened') 
                 location.reload() // this method reloads the document
             }
         }
@@ -130,7 +130,7 @@ function drawGame () {
             location.reload()
         }
 
-        return              // this is gonna stop the draw game loop and no longer execute the other functions
+        return  // this is gonna stop the draw game loop and no longer execute the other functions
     }
 
     screenUpdate()   

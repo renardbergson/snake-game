@@ -1,4 +1,4 @@
-to work with canvas, first we get it into a variable and then we get it's context, using the 
+To work with canvas, first we get it into a variable and then we get it's context, using the 
 canvasVariable.getContext('renderStyle') method
 
 
@@ -7,30 +7,30 @@ ctx.fillRect  (this function applies the previous style, it receives: x position
 height)
 
 
-in this case, the setTimeout() function is what's going to countinuously update the screen, based
+In this game, the setTimeout() function is what's going to countinuously update the screen, based
 on the speedGame variable. We can use the console.log to see how it works
 
 
-setting the tileSize based on canvas.width divided per the tileCount variable give us freedom to 
+Setting the tileSize based on canvas.width divided per the tileCount variable give us freedom to 
 update better the tileSize in the future, if we want
 
 
-for now, we wanna get the 200 value for the snake initial position, for the X and Y angles, because the screen 
+For now, we wanna get the 200 value for the snake initial position, for the X and Y angles, because the screen 
 game has 400x400 so, 200 for both is the middle of the screen
 
 
-the appendChild() method adds an element into another one
+The appendChild() method adds an element into another one
 
 
-the onresize() method let us do something when the screen size changes, we can also use "window.screen.width/height" 
+The onresize() method let us do something when the screen size changes, we can also use "window.screen.width/height" 
 to do something like that
 
 
-the Math.random() method returns random numbers between 0 and 1, so we used it into parseInt method to convert those 
+The Math.random() method returns random numbers between 0 and 1, so we used it into parseInt method to convert those 
 numbers to integer values, at the end, we multiplied those numbers by the number of tiles
 
 
-the push() method adds an element into an array
+The push() method adds an element into an array
 
 
 The shift() method removes the furtherst item from an array. In our case, we wanted that, if the array had more itens 
@@ -43,3 +43,11 @@ of possibilities for X and Y angles
 
 
 Having the screen update function avoids that the snake path remains on the screen 
+
+
+** The sessionStorage() method let us store a key and value in the browser but only while the user not closes the tab, that's
+very useful to do lots of interesting things. In our case, we used that method after que first game over message, to know if 
+the user already had opened the application and, not show the initial instructions anymore **
+
+
+The location.reload() method reloads the current document
