@@ -3,7 +3,7 @@ const $canvas = document.querySelector('.stage')
 const ctx = $canvas.getContext('2d')
 
 //speed game variable
-let speedGame = 6
+let speedGame = 5
 
 // tile settings variables
 let tileCount = 20
@@ -208,7 +208,7 @@ function checkAppleCollision () {
         // we use parse int function to convert those numbers to integer values 
         // then, we multiply those numbers by the number of tiles
         tailLength++
-        speedGame += 0.1
+        speedGame += 0.2
         scoreCounter++
         $score.innerText = scoreCounter 
         gulpSound.play()
@@ -313,16 +313,14 @@ function pressBtn () {
 }
 
 // tablet side control function
-$checkbox.addEventListener('click', () => {
-    const $controls = document.querySelector('.controls')
+const $controls = document.querySelector('.controls')
+$checkbox.onchange = () => {
 
-    if (window.screen.width < 768 || window.screen.width > 425) {
-        if ($checkbox.checked === true) {
-            $controls.style.alignSelf = 'end'
-            $controls.style.marginRight = '1.7em'
-        } else {
-            $controls.style.alignSelf = 'start'
-            $controls.style.marginLeft = '1.7em'
-        }
+    if (window.screen.width < 769 && $checkbox.checked === true) {
+        $controls.style.alignSelf = 'end'
+        $controls.style.marginRight = '1.7em'
+    } else if (window.screen.width < 769 && $checkbox.checked === false) {
+        $controls.style.alignSelf = 'start'
+        $controls.style.marginLeft = '1.7em'
     }
-})
+}
