@@ -61,7 +61,7 @@ orientationGif.style.display = 'none'
 
 // welcome function
 document.body.onload = () => {    
-    window.addEventListener('resize', () => { // onresize method let us do something when the screen size changes
+    window.addEventListener('resize', () => {
         const $workSpace = document.querySelector('.workSpace')
         const $controls = document.querySelector('.controls')
 
@@ -187,7 +187,7 @@ function isGameOver() {
 function screenUpdate () {
     const background = new Image()
     background.src = 'img/grass.png'
-    ctx.drawImage(background, 0, 0) // this function avoids the snake path remains on the screen 
+    ctx.drawImage(background, 0, 0)
 }
 
 // draw snake function
@@ -201,18 +201,16 @@ function drawSnake () {
         ctx.drawImage(snakeBody, part._x * tileCount, part._y * tileCount, tileSize, tileSize)
     }            
     
-    snakeParts.push(new snakePart(xPosition, yPosition)) // the push function adds an element into an array
+    snakeParts.push(new snakePart(xPosition, yPosition))
     
-    if (snakeParts.length > tailLength) { // the shift function removes the furtherst item from the array,
-        snakeParts.shift()                // if it has more items than our tailLenght variable
-    }                                     // the last part added is always the nearest of the snake head! 
+    if (snakeParts.length > tailLength) { 
+        snakeParts.shift()                
+    }                                     
 
     // ******************************************** HEAD ********************************************
     const snakeHead = new Image()
     snakeHead.src = snakeHeadSrc
     ctx.drawImage(snakeHead, xPosition * tileCount, yPosition * tileCount, tileSize, tileSize)
-    // multiplying the position by the number of tiles gives us the right number of possibilities 
-    // for X and Y
 }
 
 // draw Apple function
@@ -233,9 +231,6 @@ function checkAppleCollision () {
     if (appleX === xPosition && appleY === yPosition) {
         appleX = parseInt(Math.random() * tileCount)
         appleY = parseInt(Math.random() * tileCount)
-        // math random function returns random numbers between 0 and 1
-        // we use parse int function to convert those numbers to integer values 
-        // then, we multiply those numbers by the number of tiles
         tailLength++
         speedGame += 0.2
         scoreCounter++
@@ -295,7 +290,6 @@ function keyDown (event) {
 
 // direction buttons function
 function pressBtn () {
-
     // up
     $upBtn.onclick = () => {
         if (yMovement === 1) 
@@ -345,7 +339,7 @@ function pressBtn () {
 $checkbox.onchange = () => {
     const $controls = document.querySelector('.controls')
 
-    if (window.screen.width < 769 && $checkbox.checked === true) { // we can use window.screen property to access the screen size
+    if (window.screen.width < 769 && $checkbox.checked === true) {
         $controls.style.transform = "translate(5em,0)"
     } else if (window.screen.width < 769 && $checkbox.checked === false) {
         $controls.style.transform = "translate(-5em,0)"

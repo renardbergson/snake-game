@@ -15,5 +15,31 @@ setting the tileSize based on canvas.width divided per the tileCount variable gi
 update better the tileSize in the future, if we want
 
 
-for now, we wanna get the 200 value in the drawSnake function, for the X and Y angles, because the screen 
+for now, we wanna get the 200 value for the snake initial position, for the X and Y angles, because the screen 
 game has 400x400 so, 200 for both is the middle of the screen
+
+
+the appendChild() method adds an element into another one
+
+
+the onresize() method let us do something when the screen size changes, we can also use "window.screen.width/height" 
+to do something like that
+
+
+the Math.random() method returns random numbers between 0 and 1, so we used it into parseInt method to convert those 
+numbers to integer values, at the end, we multiplied those numbers by the number of tiles
+
+
+the push() method adds an element into an array
+
+
+The shift() method removes the furtherst item from an array. In our case, we wanted that, if the array had more itens 
+than our tailLenght variable, the furtherst item was removed, because the last part added is always the nearest to the 
+snake head
+
+
+In the draw snake function, multiplying the head, body or apple position by the number of tiles gives us the right number 
+of possibilities for X and Y angles
+
+
+Having the screen update function avoids that the snake path remains on the screen 
