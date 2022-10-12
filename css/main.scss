@@ -337,7 +337,7 @@
                 &:first-child {
                     
                     // **************************** MEDIA QUERIES ****************************
-                    @include devices (mobileL) {
+                    @include devices (tablet) {
                         display: none;
                     }
                     // ************************************************************************
@@ -347,7 +347,7 @@
                     display: none;
                     
                     // **************************** MEDIA QUERIES ****************************
-                    @include devices (mobileL) {
+                    @include devices (tablet) {
                         display: block;
                     }
                     // ************************************************************************
