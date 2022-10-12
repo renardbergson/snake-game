@@ -168,10 +168,14 @@ body {
               display: none; } }
         .workSpace .welcome .instructions p:nth-child(4) {
           display: none;
+          /* **************************   VERTICAL  ************************** */
           /* **************************   VERTICAL  ************************** */ }
           @media (max-width: 768px) {
             .workSpace .welcome .instructions p:nth-child(4) {
               display: block; } }
+          @media (max-width: 425px) {
+            .workSpace .welcome .instructions p:nth-child(4) {
+              display: none; } }
       .workSpace .welcome .instructions h6 {
         color: lime;
         font-size: 0.7em;

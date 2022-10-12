@@ -314,15 +314,15 @@ function pressBtn () {
 
 // tablet side control function
 $checkbox.addEventListener('click', () => {
-    const controls = document.querySelector('.controls')
+    const $controls = document.querySelector('.controls')
 
     if (window.screen.width < 768 || window.screen.width > 425) {
         if ($checkbox.checked === true) {
-            controls.style.alignSelf = 'end'
-            controls.style.marginRight = '1.7em'
+            $controls.style.alignSelf = 'end'
+            $controls.style.marginRight = '1.7em'
         } else {
-            controls.style.alignSelf = 'start'
-            controls.style.marginLeft = '1.7em'
+            $controls.style.alignSelf = 'start'
+            $controls.style.marginLeft = '1.7em'
         }
     }
 })

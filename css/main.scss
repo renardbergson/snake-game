@@ -165,6 +165,9 @@
                     @include devices (tablet) {
                         display: block;
                     }
+                    @include devices (mobileL) {
+                        display: none;
+                    }
                 }
             }
 
