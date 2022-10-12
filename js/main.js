@@ -314,14 +314,12 @@ function pressBtn () {
 }
 
 // tablet side control function
-const $controls = document.querySelector('.controls')
 $checkbox.onchange = () => {
+    const $controls = document.querySelector('.controls')
 
     if (window.screen.width < 769 && $checkbox.checked === true) { // we can use window.screen property to access the screen size
-        $controls.style.alignSelf = 'end'
-        $controls.style.marginRight = '1.7em'
+        $controls.style.transform = "translate(5em,0)"
     } else if (window.screen.width < 769 && $checkbox.checked === false) {
-        $controls.style.alignSelf = 'start'
-        $controls.style.marginLeft = '1.7em'
+        $controls.style.transform = "translate(-5em,0)"
     }
 }

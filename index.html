@@ -13,107 +13,109 @@
     <title>Snake Game</title>
 </head>
 <body>
-    <div class="workSpace">
-        <div class="welcome">
-            <h4>Bem-vindo ao Snake!</h4>
-            <h5>
+    <div class="container">
+        <div class="workSpace">
+            <div class="welcome">
+                <h4>Bem-vindo ao Snake!</h4>
+                <h5>
+                    <span>
+                        Use as setas direcionais ou <br><br>
+                        W, A, S, D para mover-se 
+                    </span>
+                    <span>
+                        Use os botões de seta para mover-se
+                    </span>
+                </h5>
+                
+                <img src="img/arrowUp-gif.gif" alt="arrowUp">
+    
+                <div class="arrowLeftAndRightWrapper">
+                    <img src="img/arrowLeft-gif.gif" alt="arrowLeft">
+                    <img src="img/arrowRight-gif.gif" alt="arrowRight">
+                </div>
+    
+                <img src="img/arrowDown-gif.gif" alt="arrowDown">
+                
+                <div class="instructions">
+                    <p>
+                        - Tome cuidado com as paredes
+                    </p>
+                    <p>
+                        - Não bata em si mesmo
+                    </p>
+                    <p>
+                        - Ative a reprodução automática <br>
+                        de sons no seu navegador!
+                    </p>
+                    <p>
+                        - Use o botão switch, se quiser <br><br> descentralizar o controle!
+                    </p>
+        
+                    <h6>
+                        <span>
+                            Pressione espaço para começar
+                        </span> 
+                        <span>
+                            Pressione start para começar
+                        </span> 
+                    </h6>
+                </div>
+            </div>
+    
+            <canvas class="stage" width="400px" height="400px"></canvas>
+        
+            <div class="scoreWrapper">
+                <img src="img/apple.png" alt="apple"> 
+                <span> 0 </span> 
+            </div>
+    
+            <div class="gameOver">
+                Game Over!
+            </div>
+    
+            <div class="pressSpace">
                 <span>
-                    Use as setas direcionais ou <br><br>
-                    W, A, S, D para mover-se 
+                    Pressione Espaço
                 </span>
                 <span>
-                    Use os botões de seta para mover-se
+                    Pressione Start
                 </span>
-            </h5>
-            
-            <img src="img/arrowUp-gif.gif" alt="arrowUp">
-
-            <div class="arrowLeftAndRightWrapper">
-                <img src="img/arrowLeft-gif.gif" alt="arrowLeft">
-                <img src="img/arrowRight-gif.gif" alt="arrowRight">
             </div>
-
-            <img src="img/arrowDown-gif.gif" alt="arrowDown">
-            
-            <div class="instructions">
-                <p>
-                    - Tome cuidado com as paredes
-                </p>
-                <p>
-                    - Não bata em si mesmo
-                </p>
-                <p>
-                    - Ative a reprodução automática <br>
-                    de sons no seu navegador!
-                </p>
-                <p>
-                    - Use o botão switch, se quiser <br><br> descentralizar o controle!
-                </p>
     
-                <h6>
-                    <span>
-                        Pressione espaço para começar
-                    </span> 
-                    <span>
-                        Pressione start para começar
-                    </span> 
-                </h6>
+            <a href="https://www.github.com/renardbergson" target="_blank" class="whoAmI">
+                <i class="fa-brands fa-github-alt githubIcon"></i>
+                <p>
+                    Renard Bergson
+                </p>
+            </a>
+    
+            <div class="switchBtnWrapper">
+                <input type="checkbox" class="checkbox">
+                <i class="fa-solid fa-gamepad"></i>
             </div>
         </div>
-
-        <canvas class="stage" width="400px" height="400px"></canvas>
     
-        <div class="scoreWrapper">
-            <img src="img/apple.png" alt="apple"> 
-            <span> 0 </span> 
-        </div>
-
-        <div class="gameOver">
-            Game Over!
-        </div>
-
-        <div class="pressSpace">
-            <span>
-                Pressione Espaço
-            </span>
-            <span>
-                Pressione Start
-            </span>
-        </div>
-
-        <a href="https://www.github.com/renardbergson" target="_blank" class="whoAmI">
-            <i class="fa-brands fa-github-alt githubIcon"></i>
-            <p>
-                Renard Bergson
-            </p>
-        </a>
-
-        <div class="switchBtnWrapper">
-            <input type="checkbox" class="checkbox">
-            <i class="fa-solid fa-gamepad"></i>
-        </div>
-    </div>
-
-    <div class="controls">
-        <button class="upBtn">
-            <i class="fa fa-duotone fa-square-caret-up"></i>
-        </button>
-
-        <div>
-            <button class="leftBtn">
-                <i class="fa fa-duotone fa-square-caret-left"></i>
+        <div class="controls">
+            <button class="upBtn">
+                <i class="fa fa-duotone fa-square-caret-up"></i>
             </button>
-
-            <button class="startBtn">Start</button>
-
-            <button class="rightBtn">
-                <i class="fa fa-duotone fa-square-caret-right"></i>
+    
+            <div>
+                <button class="leftBtn">
+                    <i class="fa fa-duotone fa-square-caret-left"></i>
+                </button>
+    
+                <button class="startBtn">Start</button>
+    
+                <button class="rightBtn">
+                    <i class="fa fa-duotone fa-square-caret-right"></i>
+                </button>
+            </div>
+    
+            <button class="downBtn">
+                <i class="fa fa-duotone fa-square-caret-down"></i>
             </button>
         </div>
-
-        <button class="downBtn">
-            <i class="fa fa-duotone fa-square-caret-down"></i>
-        </button>
     </div>
 
     <script src="js/main.js"></script>

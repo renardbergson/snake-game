@@ -11,13 +11,10 @@ body {
     width: 100%;
     height: 100vh;
     background-color: rgba(109, 156, 109, 0.437);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
-    touch-action: pinch-zoom;
+    touch-action: none;
 
     // **************************** MEDIA QUERIES ****************************
     @include devices (tablet) {
