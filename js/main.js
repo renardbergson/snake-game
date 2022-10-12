@@ -49,6 +49,7 @@ const $upBtn = document.querySelector('.upBtn')
 const $leftBtn = document.querySelector('.leftBtn')
 const $rightBtn = document.querySelector('.rightBtn')
 const $downBtn = document.querySelector('.downBtn')
+const $checkbox = document.querySelector('.checkbox')
 
 // welcome function
 document.body.onload = () => {    
@@ -310,3 +311,18 @@ function pressBtn () {
         snakeHeadSrc = 'img/snake-head-right.png'           
     }
 }
+
+// tablet side control function
+$checkbox.addEventListener('click', () => {
+    const controls = document.querySelector('.controls')
+
+    if (window.screen.width < 768 || window.screen.width > 425) {
+        if ($checkbox.checked === true) {
+            controls.style.alignSelf = 'end'
+            controls.style.marginRight = '1.7em'
+        } else {
+            controls.style.alignSelf = 'start'
+            controls.style.marginLeft = '1.7em'
+        }
+    }
+})
