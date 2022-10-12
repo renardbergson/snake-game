@@ -269,49 +269,49 @@ function keyDown (event) {
 function pressBtn () {
 
     // up
-    $upBtn.ontouchstart = () => {
+    $upBtn.onclick = () => {
         if (yMovement === 1) 
         return 
 
+        clickSound.play()
         yMovement = -1
         xMovement = 0
-        clickSound.play()
 
         snakeHeadSrc = 'img/snake-head-up.png'             
     }
 
     // down
-    $downBtn.ontouchstart = () => {
+    $downBtn.onclick = () => {
         if (yMovement === -1) 
         return
 
+        clickSound.play()
         yMovement = 1 
         xMovement = 0 
-        clickSound.play()
 
         snakeHeadSrc = 'img/snake-head-down.png'           
     }
 
     // left
-    $leftBtn.ontouchstart = () => {
+    $leftBtn.onclick = () => {
         if (xMovement === 1) 
         return
 
+        clickSound.play()
         yMovement = 0
         xMovement = -1
-        clickSound.play()
 
         snakeHeadSrc = 'img/snake-head-left.png'         
     }
 
     // right
-    $rightBtn.ontouchstart = () => {
+    $rightBtn.onclick = () => {
         if (xMovement === -1) 
         return
 
+        clickSound.play()
         yMovement = 0
         xMovement = 1
-        clickSound.play()
 
         snakeHeadSrc = 'img/snake-head-right.png'           
     }
