@@ -227,7 +227,7 @@ function keyDown (event) {
         
         yMovement = -1 // the Y angle has value zero in the center and decreases when goind up
         xMovement = 0 // we wanna do nothing with X angle when pressing arrow up key 
-
+        clickSound.play()
         snakeHeadSrc = 'img/snake-head-up.png'              // snake head controller
     }
     
@@ -238,7 +238,7 @@ function keyDown (event) {
             
         yMovement = 1 
         xMovement = 0 
-
+        clickSound.play()
         snakeHeadSrc = 'img/snake-head-down.png'            // snake head controller
     }
 
@@ -249,7 +249,7 @@ function keyDown (event) {
 
         yMovement = 0
         xMovement = -1
-
+        clickSound.play()
         snakeHeadSrc = 'img/snake-head-left.png'            // snake head controller
     }
 
@@ -260,7 +260,7 @@ function keyDown (event) {
 
         yMovement = 0
         xMovement = 1
-
+        clickSound.play()
         snakeHeadSrc = 'img/snake-head-right.png'           // snake head controller
     }
 }
@@ -273,10 +273,9 @@ function pressBtn () {
         if (yMovement === 1) 
         return 
 
-        clickSound.play()
         yMovement = -1
         xMovement = 0
-
+        clickSound.play()
         snakeHeadSrc = 'img/snake-head-up.png'             
     }
 
@@ -285,10 +284,9 @@ function pressBtn () {
         if (yMovement === -1) 
         return
 
-        clickSound.play()
         yMovement = 1 
         xMovement = 0 
-
+        clickSound.play()
         snakeHeadSrc = 'img/snake-head-down.png'           
     }
 
@@ -297,10 +295,9 @@ function pressBtn () {
         if (xMovement === 1) 
         return
 
-        clickSound.play()
         yMovement = 0
         xMovement = -1
-
+        clickSound.play()
         snakeHeadSrc = 'img/snake-head-left.png'         
     }
 
@@ -309,10 +306,9 @@ function pressBtn () {
         if (xMovement === -1) 
         return
 
-        clickSound.play()
         yMovement = 0
         xMovement = 1
-
+        clickSound.play()
         snakeHeadSrc = 'img/snake-head-right.png'           
     }
 }
