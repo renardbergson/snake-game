@@ -339,9 +339,17 @@ function pressBtn () {
 $checkbox.onchange = () => {
     const $controls = document.querySelector('.controls')
 
+    // tablets and iPads
     if (window.screen.width < 769 && $checkbox.checked === true) {
-        $controls.style.transform = "translate(5em,0)"
+        $controls.style.transform = "translate(7em,0)"
     } else if (window.screen.width < 769 && $checkbox.checked === false) {
-        $controls.style.transform = "translate(-5em,0)"
+        $controls.style.transform = "translate(-7em,0)"
+    }
+
+    // galaxy zFold opened
+    if (window.screen.width < 513 && $checkbox.checked === true) {
+        $controls.style.transform = "translate(5.5em,0)"
+    } else if (window.screen.width < 513 && $checkbox.checked === false) {
+        $controls.style.transform = "translate(-5.5em,0)"
     }
 }

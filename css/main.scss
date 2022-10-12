@@ -422,6 +422,7 @@
         font-size: 2.4em;
         margin-bottom: -0.6em;
         transition: 500ms;
+        display: none;
         
         // **************************** MEDIA QUERIES ****************************
         @include devices (tablet) {
@@ -429,10 +430,10 @@
             flex-direction: column;
             align-items: center;
             align-items: center;
+            margin-top: 1em;
         }
         @include devices (mobileL) {
-            margin-top: 1em;
-            margin-left: 0;
+            margin-top: 2em;
         }
         @include devices (mobileM) {
             margin-top: 3em;
