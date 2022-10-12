@@ -52,8 +52,36 @@ const $rightBtn = document.querySelector('.rightBtn')
 const $downBtn = document.querySelector('.downBtn')
 const $checkbox = document.querySelector('.checkbox')
 
+// orientation utilities in landscape mode
+const orientationGif = new Image(300, 300)
+const $container = document.querySelector('.container')
+orientationGif.src = 'img/rotate-phone.gif'
+$container.appendChild(orientationGif)
+orientationGif.style.display = 'none'
+
 // welcome function
 document.body.onload = () => {    
+    window.addEventListener('resize', () => { // onresize method let us do something when the screen size changes
+        const $workSpace = document.querySelector('.workSpace')
+        const $controls = document.querySelector('.controls')
+
+        
+        if (window.innerHeight <= 600) {
+            $workSpace.style.display = 'none'
+            $controls.style.display = 'none'
+            orientationGif.style.display = 'block'
+        } else if (window.innerHeight > 600) {
+            $workSpace.style.display = 'block'
+            $controls.style.display = 'flex'
+            orientationGif.style.display = 'none'
+        }
+
+        if (window.innerWidth > 768) {
+            $controls.style.display = 'none'
+        }
+    }) 
+
+
     if (sessionStorage.getItem('snakeGame')) {
         drawGame()
         return
