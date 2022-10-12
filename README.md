@@ -50,7 +50,7 @@ Desenvolvi esta aplicação visando desafiar a mim mesmo pois, para isso, precis
 ### Video Preview
 Este é um pequeno preview da aplicação <br>
 
-https://user-images.githubusercontent.com/97261795/195451294-d6b9d2bd-beea-42f7-93d2-85ce093ac3d4.mov
+https://user-images.githubusercontent.com/97261795/195466771-bd6b2a05-ac3e-457c-bca3-e25c702cbcdd.mov
 
 ### Link
   •	[Snake Game](https://renardbergson.github.io/snake-game/) 
