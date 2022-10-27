@@ -53,7 +53,7 @@ Este é um pequeno preview da aplicação <br>
 https://user-images.githubusercontent.com/97261795/195466771-bd6b2a05-ac3e-457c-bca3-e25c702cbcdd.mov
 
 ### Link
-  •	[Snake Game](https://renardbergson.github.io/snake-game/) 
+  •	[Snake Game](https://snake-rb.netlify.app) 
 
 ### Autor
   •	Renard Bergson 🤓 <br>
