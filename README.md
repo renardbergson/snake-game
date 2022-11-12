@@ -57,6 +57,6 @@ https://user-images.githubusercontent.com/97261795/195466771-bd6b2a05-ac3e-457c-
 
 ### Autor
   •	Renard Bergson 🤓 <br>
-	•	renardrock@gmail.com <br>
+	•	contato@renardb.com <br>
 	•	[LinkedIn](https://www.linkedin.com/in/renardbergson) <br>
 	•	[GitHub](https://www.github.com/renardbergson)
